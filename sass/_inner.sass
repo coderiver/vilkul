@@ -1,0 +1,119 @@
+@import "base"
+//styles for inner pages
+//menu
+.menu
+	margin-bottom: 35px
+	li
+		padding-bottom: 15px
+		margin-bottom: 15px
+		border-bottom: 1px solid #b6b6b6 
+		&.is-active
+			a
+				position: relative
+				padding-right: 16px
+				font-weight: bold
+				&:after
+					content: ""
+					position: absolute
+					top: 5px
+					right: 0
+					+s(arr-act)
+		a
+			+font-thin
+			font-size: 22px
+			color: #000 
+			text-transform: uppercase
+//news
+.news
+	margin-bottom: 40px
+	.h2
+		text-align: left
+		line-height: 1
+.news_main
+	.h2
+		text-align: center
+		line-height: 1.4 
+	.news__list
+		margin: 0
+	.news__item
+		width: 300px
+	.news__pic
+		width: 300px
+		height: 150px
+	.news__title
+		font-size: 18px
+.news__list
+	padding-left: 10px
+	margin: 0 -20px
+	font-size: 0
+.news__item
+	display: inline-block
+	width: 220px
+	padding: 0 10px 50px 10px
+	vertical-align: top	
+	&:hover
+		.news__pic
+			&:before
+				content: ""
+				position: absolute
+				top: 0
+				left: 0
+				bottom: 0
+				right: 0
+				border: 5px solid #00b4ff
+		.news__title
+			color: #00b4ff
+			span
+				color: #000 
+.news__pic
+	position: relative
+	width: 220px
+	height: 130px
+	margin-bottom: 5px
+	background: #f3f3f3 
+	img
+		display: block		
+.news__title
+	font-size: 14px
+	color: #007cb0
+	span
+		display: block
+		padding-top: 10px
+		font-size: 12px
+		color: #9f9f9f  
+//projects
+.projects
+	margin-bottom: 40px
+.projects__list
+	padding-left: 10px
+	font-size: 0
+.projects__item
+	display: inline-block
+	width: 300px
+	padding: 0 10px 50px 10px
+	vertical-align: top	
+	text-align: center
+	span
+		font-size: 20px
+		color: #007cb0
+	&:hover
+		.projects__pic
+			&:before
+				content: ""
+				position: absolute
+				top: 0
+				left: 0
+				bottom: 0
+				right: 0
+				border: 5px solid #00b4ff
+		span
+			color: #00b4ff
+.projects__pic
+	position: relative
+	width: 300px
+	height: 210px
+	margin-bottom: 10px
+	background: #f3f3f3 
+	img
+		display: block
+		

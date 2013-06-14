@@ -1,0 +1,401 @@
+@import "base"
+* 
+	margin: 0
+	padding: 0 
+	//-webkit-text-size-adjust: none
+html, body 
+	height: 100%
+body
+	font-family: Calibri, Arial, Tahoma, sans-serif
+	font-weight: normal 
+	font-size: 14px
+	color: $font
+	line-height: 1.4
+	//-webkit-transform: translate3d(0,0,0);
+	//-weblit-backface-visibility: hidden;
+// resets
+a img, fieldset 
+	border: none
+a
+	text-decoration: none
+	&:hover
+p
+	line-height: 1.2
+li 
+	list-style: none
+textarea, button, select, input
+	border: none
+	outline: none
+	font-family: Calibri, Arial, Tahoma, sans-serif
+button 
+	line-height: 1
+	cursor: pointer
+	&::-moz-focus-inner
+		padding: 0
+		border: 0
+table 
+	border-spacing: 0
+	border-collapse: collapse
+// common styles
+.wrap
+	width: 980px
+	min-height: 100%
+	height: auto !important
+	height: 100%
+	margin: 0 auto -285px
+.push
+	height: 285px
+	clear: both
+.h2, .h3
+	margin-bottom: 18px
+	+font-thin
+	font-size: 40px
+	font-weight: normal
+	text-align: center
+	text-transform: uppercase
+	color: #000 
+.h2
+	font-size: 40px
+.h3
+	font-size: 30px
+//header
+.header
+	position: relative
+	height: 180px
+.home
+	position: absolute
+	top: 36px
+	left: 355px
+	+s(home) 
+.logo
+	float: left
+	margin: 41px 0 0 20px 	
+	span
+		text-transform: uppercase
+		+font-light
+		color: #000 
+.logo__name
+	+s(logo)
+	@extend %ht
+.social
+	float: right
+	margin-top: 43px
+	a
+		display: block
+		margin-bottom: 5px
+.social__fb
+	+s(fb)
+.social__tw
+	+s(tw)
+.social__yt
+	+s(yt)
+.social__rss
+	+s(rss)
+.nav
+	float: right
+	margin-top: 36px
+	ul
+		float: left
+		width: 140px
+		padding-right: 20px
+		&:last-child
+			width: 200px
+	li
+		padding-left: 5px
+		margin-bottom: 5px
+		line-height: 1.2
+		&:first-child
+			font-size: 24px
+			&.is-active
+				background: #a2a2a2
+				a
+					color: #fff  
+	a
+		+font-reg
+		color: $blue
+		text-transform: uppercase 
+.nav_mod
+	margin-right: 20px
+	margin-top: 44px
+	a
+		font-family: Calibri, Arial, Tahoma, sans-serif
+		color: #5a5a5a
+		text-transform: none 
+	li
+		&:first-child
+			a
+				color: #000 
+				text-transform: uppercase
+.search
+	position: absolute
+	bottom: 0
+	left: 0
+	padding: 6px 0 6px 20px
+	background: $blue
+	input
+		float: left
+		width: 280px
+		height: 24px
+		background: #FFF 
+		padding: 0 10px
+		+font-reg
+		font-size: 16px
+		+input-placeholder(#000)
+	button
+		float: left
+		+s(btn-search)
+//footer
+.footer
+	border-top: 40px solid #bdbdbd
+	box-shadow: 0 0 0 5px $blue
+	background: #d4d4d4 
+.footer__in
+	position: relative
+	width: 980px
+	height: 245px
+	margin: 0 auto
+.subscribe
+	float: left
+	margin: 35px 0 0 20px
+	label, span
+		display: block
+	span
+		padding-left: 10px 
+		+font-reg
+		font-size: 14px
+		text-transform: uppercase
+		color: #43392a 
+	input
+		float: left
+		width: 200px
+		height: 29px 
+		padding: 0 9px
+		border-top: 1px solid #9d9d9d
+		border-left: 1px solid #9D9D9D 
+		border-right: 1px solid #cecece
+		border-bottom: 1px solid #cecece
+		font-size: 20px  
+	button
+		float: left
+		width: 60px
+		height: 31px
+		margin-left: 18px
+		background: $blue 
+		+font-reg
+		font-size: 24px
+		color: #fff
+		text-transform: uppercase
+.subscribe_aside
+	margin: 0 0 20px 0
+	span
+		padding: 0
+		+font-light
+		font-size: 30px
+		text-align: center
+		color: #606060 
+	input
+		width: 200px
+		margin: 0 0 17px 0
+	button
+		margin-left: 80px
+.copyright
+	position: absolute
+	top: 135px
+	left: 5px
+	color: #000
+.created
+	position: absolute
+	top: 175px
+	left: 20px
+	color: #616161 
+	a
+		color: #0076a7
+		text-decoration: underline 
+//all
+.all
+	text-align: center
+	a
+		display: inline-block
+		position: relative
+		padding-right: 41px 
+		+font-light
+		font-size: 22px
+		text-transform: uppercase
+		color: #007cb0 
+		&:hover
+			color: #00b4ff 
+			.all__arr
+				+s(arr-l-h)
+.all__arr
+	position: absolute
+	top: -2px
+	right: 0px
+	+s(arr-l)
+//digit-day
+.digit-day
+	.h3
+		margin-bottom: 0
+		color: #858585 
+.digit-day__in
+	border: 6px solid #adadad
+	padding: 22px 20px
+	overflow: hidden
+	span
+		float: left
+		margin-right: 20px
+		+font-light
+		font-size: 72px
+		color: #3f3f3f 
+		line-height: 1.2
+	p
+		overflow: hidden
+		font-size: 18px
+		line-height: 1.5
+.digit-day_aside
+	margin-bottom: 20px
+	.digit-day__in	
+		padding: 15px
+		text-align: center
+		span
+			float: none
+			display: block
+			font-size: 60px
+			line-height: 1
+		p
+			font-size: 14px
+//announcement
+.announcement
+	.h3
+		margin-bottom: 0
+		color: #007cb0 
+.announcement__in
+	position: relative
+	min-height: 60px
+	padding: 25px 18px 45px 18px
+	border: 6px solid $blue
+.announcement__slider
+	text-align: center
+	font-size: 18px
+.announcement__navi
+	position: absolute
+	left: 0
+	right: 0
+	bottom: 20px 
+	text-align: center
+	font-size: 0
+	a
+		display: inline-block
+		width: 9px
+		height: 9px
+		margin: 0 9px
+		background: #f4f4f4
+		box-shadow: 1px 1px 3px rgba(0,0,0,.4) inset
+		+rotate(45)
+		&.is-active
+			background: #66c5ed   
+.announcement_aside	
+	margin-bottom: 20px
+	.announcement__in
+		padding: 15px 18px 45px 18px
+	.announcement__slider
+		font-size: 14px
+//calendar
+.calendar
+	padding: 12px 0
+	margin: 0 20px 65px 20px
+	border: 1px solid #bebebe
+.calendar_aside
+	margin: 0 0 20px 0
+	.calendar__days
+		ul
+			padding-left: 17px
+			text-align: left
+		li
+			width: 26px
+			text-align: center
+			font-size: 14px
+			text-align: center
+	.calendar__month
+		margin-bottom: 10px
+		button
+			font-size: 18px
+	.calendar__prev, .calendar__next
+		top: -29px
+	.calendar__prev
+		left: 13px
+		+s(prev-s)
+	.calendar__next
+		right: 13px
+		+s(next-s)
+.calendar__month
+	margin-bottom: 5px
+	text-align: center
+	button
+		position: relative
+		padding-right: 20px
+		background: none
+		font-size: 24px
+		overflow: visible
+		i
+			position: absolute
+			top: 9px
+			right: 0
+			+s(arr-b)
+.calendar__slider
+	position: relative
+.calendar__prev, .calendar__next
+	position: absolute
+	top: 1px
+	z-index: 10 
+.calendar__prev
+	left: 14px
+	+s(prev)
+.calendar__next
+	right: 14px
+	+s(next)
+.calendar__days
+	ul
+		font-size: 0
+		text-align: center
+	li
+		display: inline-block
+		width: 28px
+		padding: 2px 0
+		vertical-align: top
+		font-size: 17px
+		color: #007cb0 
+		cursor: pointer
+		&.is-red
+			color: #ff3600
+		&.is-selected
+			background: #009fe1 
+			color: #fff
+		&.no-active
+			color: #a4a4a4
+		&.no-active-red
+			color: #ff977b 
+//pagination
+.pagination
+	margin-bottom: 80px
+	text-align: center
+	font-size: 0
+	a
+		display: inline-block
+		padding: 2px 10px
+		margin: 0 15px
+		font-size: 30px
+		color: #007cb0
+		line-height: 1
+		&.is-active
+			background: #898989 
+			color: #fff 
+			cursor: default
+	.pagination__prev, .pagination__next
+		position: relative
+		top: 2px
+		padding: 0
+.pagination__prev
+	+s(prev)
+.pagination__next
+	+s(next)
+		  
