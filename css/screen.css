@@ -1,8 +1,8 @@
 .logo__name { font: 0/0 a; text-shadow: none; color: transparent; }
 
-.layout { *zoom: 1; }
-.layout:before, .layout:after { content: ""; display: table; }
-.layout:after { clear: both; }
+.layout, .anonses { *zoom: 1; }
+.layout:before, .anonses:before, .layout:after, .anonses:after { content: ""; display: table; }
+.layout:after, .anonses:after { clear: both; }
 
 @font-face { font-family: "pfdin_light"; src: url("../fonts/pfdintextcomppro-light-webfont.eot"); src: url("../fonts/pfdintextcomppro-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/pfdintextcomppro-light-webfont.woff") format("woff"), url("../fonts/pfdintextcomppro-light-webfont.ttf") format("truetype"), url("../fonts/pfdintextcomppro-light-webfont.svg#pf_din_text_comp_prolight") format("svg"); font-weight: normal; font-style: normal; }
 
@@ -174,9 +174,9 @@ table { border-spacing: 0; border-collapse: collapse; }
 
 .logo__name { font: 0/0 a; text-shadow: none; color: transparent; }
 
-.layout { *zoom: 1; }
-.layout:before, .layout:after { content: ""; display: table; }
-.layout:after { clear: both; }
+.layout, .anonses { *zoom: 1; }
+.layout:before, .anonses:before, .layout:after, .anonses:after { content: ""; display: table; }
+.layout:after, .anonses:after { clear: both; }
 
 @font-face { font-family: "pfdin_light"; src: url("../fonts/pfdintextcomppro-light-webfont.eot"); src: url("../fonts/pfdintextcomppro-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/pfdintextcomppro-light-webfont.woff") format("woff"), url("../fonts/pfdintextcomppro-light-webfont.ttf") format("truetype"), url("../fonts/pfdintextcomppro-light-webfont.svg#pf_din_text_comp_prolight") format("svg"); font-weight: normal; font-style: normal; }
 
@@ -200,9 +200,9 @@ table { border-spacing: 0; border-collapse: collapse; }
 
 .logo__name { font: 0/0 a; text-shadow: none; color: transparent; }
 
-.layout { *zoom: 1; }
-.layout:before, .layout:after { content: ""; display: table; }
-.layout:after { clear: both; }
+.layout, .anonses { *zoom: 1; }
+.layout:before, .anonses:before, .layout:after, .anonses:after { content: ""; display: table; }
+.layout:after, .anonses:after { clear: both; }
 
 @font-face { font-family: "pfdin_light"; src: url("../fonts/pfdintextcomppro-light-webfont.eot"); src: url("../fonts/pfdintextcomppro-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/pfdintextcomppro-light-webfont.woff") format("woff"), url("../fonts/pfdintextcomppro-light-webfont.ttf") format("truetype"), url("../fonts/pfdintextcomppro-light-webfont.svg#pf_din_text_comp_prolight") format("svg"); font-weight: normal; font-style: normal; }
 
@@ -230,9 +230,9 @@ table { border-spacing: 0; border-collapse: collapse; }
 
 .logo__name { font: 0/0 a; text-shadow: none; color: transparent; }
 
-.layout { *zoom: 1; }
-.layout:before, .layout:after { content: ""; display: table; }
-.layout:after { clear: both; }
+.layout, .anonses { *zoom: 1; }
+.layout:before, .anonses:before, .layout:after, .anonses:after { content: ""; display: table; }
+.layout:after, .anonses:after { clear: both; }
 
 @font-face { font-family: "pfdin_light"; src: url("../fonts/pfdintextcomppro-light-webfont.eot"); src: url("../fonts/pfdintextcomppro-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/pfdintextcomppro-light-webfont.woff") format("woff"), url("../fonts/pfdintextcomppro-light-webfont.ttf") format("truetype"), url("../fonts/pfdintextcomppro-light-webfont.svg#pf_din_text_comp_prolight") format("svg"); font-weight: normal; font-style: normal; }
 
@@ -282,9 +282,9 @@ table { border-spacing: 0; border-collapse: collapse; }
 
 .logo__name { font: 0/0 a; text-shadow: none; color: transparent; }
 
-.layout { *zoom: 1; }
-.layout:before, .layout:after { content: ""; display: table; }
-.layout:after { clear: both; }
+.layout, .anonses { *zoom: 1; }
+.layout:before, .anonses:before, .layout:after, .anonses:after { content: ""; display: table; }
+.layout:after, .anonses:after { clear: both; }
 
 @font-face { font-family: "pfdin_light"; src: url("../fonts/pfdintextcomppro-light-webfont.eot"); src: url("../fonts/pfdintextcomppro-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/pfdintextcomppro-light-webfont.woff") format("woff"), url("../fonts/pfdintextcomppro-light-webfont.ttf") format("truetype"), url("../fonts/pfdintextcomppro-light-webfont.svg#pf_din_text_comp_prolight") format("svg"); font-weight: normal; font-style: normal; }
 
@@ -327,3 +327,27 @@ table { border-spacing: 0; border-collapse: collapse; }
 .related .related__list { list-style: none; font-size: 16px; }
 .related .related__list a { color: black; display: block; padding-top: 22px; margin-bottom: 10px; position: relative; }
 .related .related__list a:before { content: " "; position: absolute; left: 50%; top: 0; background: url('../img/icons-sbaf24e53b4.png') 0 -455px no-repeat; width: 9px; height: 9px; }
+
+.bread { text-transform: uppercase; color: black; font-family: "pfdin_reg", Calibri, Arial, sans-serif; font-size: 18px; margin-bottom: 3px; }
+.bread a { color: black; text-decoration: none; }
+
+.logo__name { font: 0/0 a; text-shadow: none; color: transparent; }
+
+.layout, .anonses { *zoom: 1; }
+.layout:before, .anonses:before, .layout:after, .anonses:after { content: ""; display: table; }
+.layout:after, .anonses:after { clear: both; }
+
+@font-face { font-family: "pfdin_light"; src: url("../fonts/pfdintextcomppro-light-webfont.eot"); src: url("../fonts/pfdintextcomppro-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/pfdintextcomppro-light-webfont.woff") format("woff"), url("../fonts/pfdintextcomppro-light-webfont.ttf") format("truetype"), url("../fonts/pfdintextcomppro-light-webfont.svg#pf_din_text_comp_prolight") format("svg"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: "pfdin_reg"; src: url("../fonts/pfdintextcomppro-regular-webfont.eot"); src: url("../fonts/pfdintextcomppro-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/pfdintextcomppro-regular-webfont.woff") format("woff"), url("../fonts/pfdintextcomppro-regular-webfont.ttf") format("truetype"), url("../fonts/pfdintextcomppro-regular-webfont.svg#pf_din_text_comp_proregular") format("svg"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: "pfdin_thin"; src: url("../fonts/pfdintextcomppro-thin-webfont.eot"); src: url("../fonts/pfdintextcomppro-thin-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/pfdintextcomppro-thin-webfont.woff") format("woff"), url("../fonts/pfdintextcomppro-thin-webfont.ttf") format("truetype"), url("../fonts/pfdintextcomppro-thin-webfont.svg#pf_din_text_comp_prothin") format("svg"); font-weight: normal; font-style: normal; }
+
+.anonses { margin-right: -20px; margin-bottom: 20px; }
+.anonses .anonses__head { font-size: 45px; font-family: "pfdin_thin", Calibri, Arial, sans-serif; font-weight: normal; line-height: 1.3; margin-bottom: 20px; text-transform: uppercase; }
+
+.anons { float: left; cursor: pointer; margin: 0 20px 20px 0; width: 202px; height: 176px; padding: 20px 5px 0 5px; border: 4px solid #00a1dc; text-align: center; }
+.anons:hover { border-color: black; }
+.anons .anons__date { font-size: 16px; font-weight: bold; color: black; margin-bottom: 15px; padding-bottom: 20px; position: relative; }
+.anons .anons__date:before { content: " "; position: absolute; left: 50%; margin-left: -5px; background: url('../img/icons-sbaf24e53b4.png') 0 -455px no-repeat; width: 9px; height: 9px; bottom: 0; }
+.anons .anons__content { font-size: 16px; line-height: 1.4; }
