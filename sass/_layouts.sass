@@ -19,6 +19,23 @@
 
 		.right
 			background: #fff 
+	&.layout_wings
+		.layout__left,.layout__right
+			width: 10px
+			height: 85px
+			background: #DDDDDD
+			position: absolute
+			top: 0
+		.layout__right
+			right: 0
+		.layout__left
+			left: 0
+	&.layout_wingright
+		.layout__right
+			width: 160px
+		.right
+			margin-right: 160px
+			width: 540px
 .aside
 	float: left
 	width: 220px
@@ -27,17 +44,7 @@
 	float: right
 	width: 700px
 
-.layout_wings
-	.layout__left,.layout__right
-		width: 10px
-		height: 85px
-		background: #DDDDDD
-		position: absolute
-		top: 0
-	.layout__right
-		right: 0
-	.layout__left
-		left: 0
+
 
 
 
