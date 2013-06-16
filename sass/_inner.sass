@@ -12,17 +12,17 @@
 				position: relative
 				padding-right: 16px
 				font-weight: bold
-				&:after
-					content: ""
-					position: absolute
-					top: 5px
-					right: 0
+				display: block
+				&:after, i
+					display: inline-block
 					+s(arr-act)
+					margin-left: 5px 
 		a
 			+font-thin
 			font-size: 22px
 			color: #000 
 			text-transform: uppercase
+			display: block
 //news
 .news
 	margin-bottom: 40px

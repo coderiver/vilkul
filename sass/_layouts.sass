@@ -5,9 +5,24 @@
 	border-top: 50px solid #DDDDDD 
 	@extend %clr
 	position: relative
+	&.layout_single
+		border-style: none
+		padding-top: 155px 
+		.aside, .right
+			position: relative
+			z-index: 10 
+		.aside
+			z-index: 30 
+			margin-left: -10px 
+			padding-left: 10px 
+			padding-top: 10px 
+
+		.right
+			background: #fff 
 .aside
 	float: left
 	width: 220px
+	background: rgba(#fff, .9)
 .right
 	float: right
 	width: 700px

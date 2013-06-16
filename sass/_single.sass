@@ -1,0 +1,159 @@
+@import "base"
+
+.single
+	.single__outside
+		position: absolute
+		left: -260px
+		top: -155px
+		z-index: 5 
+
+	.single__outsidebottom
+		position: absolute
+		top: 100% 
+		padding-top: 20px 
+		width: 130px 
+		right: 0 
+		padding-left: 30px 
+		.single__tags
+			font-size: 14px 
+			color: #8D8D8D
+			+font-thin
+			position: relative
+			margin-bottom: 25px 
+			a
+				color: #8D8D8D
+				text-decoration: none
+		.single__tagsicon
+			position: absolute
+			left: -30px 
+			top: 3px
+			+s(tags)
+
+
+
+	.single__content
+		position: relative
+		z-index: 100 
+		background: #fff 
+		width: 540px 
+		padding-left: 20px 
+		padding-top: 12px 
+		padding-right: 20px 
+		margin-left: -20px 
+	.single__categ
+		text-transform: uppercase
+		color: #000000
+		+font-reg
+		font-size: 18px 
+		margin-bottom: 3px 
+		a
+			color: #000
+			text-decoration: none
+	.single__title
+		font-size: 36px 
+		color: #000 
+		font-weight: normal
+		+font-thin
+		line-height: 1.3 
+		text-transform: uppercase
+		margin-bottom: 14px 
+	.single__published
+		font-size: 14px 
+		color: #969696
+		margin-bottom: 20px  
+	.single__text
+		font-size: 16px 
+		color: #403f3f
+		line-height: 1.4
+		p
+			margin-bottom: 1em  
+		figure
+			margin: 20px 0 
+			img
+				display: block
+			figcaption
+				padding: 14px 
+				font-size: 14px 
+				background: #F6F6F6
+				display: block
+		.figure_right
+			float: right
+			margin-right: -150px 
+			width: 300px 
+			margin-left: 20px 
+			img
+				width: 100% 
+		.related
+			float: right
+			width: 300px - 40px - 8px
+			margin-right: -150px  
+			margin-left: 20px
+			margin-top: 20px  
+			margin-bottom: 20px 
+		.fotos
+			margin: 20px -180px 20px -260px
+			position: relative
+.fotos
+	.fotos__title
+		+font-thin
+		font-weight: normal
+		text-align: center
+		font-size: 36px 
+		margin-bottom: 20px 
+		text-transform: uppercase
+	.fotos__item
+		float: left
+		width: 140px 
+		height: 130px 
+		margin-right: 20px 
+		img
+			display: block
+			background: #ccc 
+	.fotos__caro
+		position: relative
+		margin-left: 32px 
+		width: 940px 
+		overflow: hidden
+		height: 130px 
+		.fotos__slides
+			position: absolute
+			left: 0 
+			top: 0 
+			width: 20000em 
+	.fotos__next, .fotos__prev
+		position: absolute
+		bottom: 48px 
+		cursor: pointer
+	.fotos__next
+		+s(fotos__next)
+		right: -23px
+	.fotos__prev
+		+s(fotos__prev)
+		left: 0 
+
+.related
+	border: 4px solid #C2C2C2
+	padding: 20px 
+	text-align: center
+	.related__title
+		font-size: 18px
+		color: #000 
+		+font-light
+		margin-bottom: 15px 
+		text-transform: uppercase
+	.related__list
+		list-style: none
+		font-size: 16px
+		a
+			color: #000 
+			display: block
+			padding-top: 22px 
+			margin-bottom: 10px 
+			position: relative
+			&:before
+				content: ' '
+				position: absolute
+				left: 50% 
+				top: 0
+				+s(bul) 
+
