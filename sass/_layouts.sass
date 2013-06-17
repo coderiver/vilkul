@@ -1,48 +1,44 @@
 @import "base"
 //styles for layouts
 .layout
-	padding: 20px
-	border-top: 50px solid #DDDDDD 
-	@extend %clr
 	position: relative
-	&.layout_single
-		border-style: none
-		padding-top: 155px 
-		.aside, .right
-			position: relative
-			z-index: 10 
-		.aside
-			z-index: 30 
-			margin-left: -10px 
-			padding-left: 10px 
-			padding-top: 10px 
-
-		.right
-			background: #fff 
-	&.layout_wings
-		.layout__left,.layout__right
-			width: 10px
-			height: 85px
-			background: #DDDDDD
-			position: absolute
-			top: 0
-		.layout__right
-			right: 0
-		.layout__left
-			left: 0
-	&.layout_wingright
-		.layout__right
-			width: 160px
-		.right
-			margin-right: 160px
-			width: 540px
+	margin-bottom: 50px
+	@extend %clr	
+	.aside, .right
+		position: relative
+		margin-top: -85px
+		z-index: 10
+	.aside
+		margin-left: 10px
+		padding: 15px 0 0 10px 
+	.right
+		width: 740px
+	.right_big
+		width: 700px
+		padding: 20px 10px 0 20px
+		background: #fff 
+.layout_mod
+	.aside, .right
+		margin-top: -210px
+.layout__pic
+	min-height: 130px
+	background: #dddddd 
 .aside
 	float: left
 	width: 220px
 	background: rgba(#fff, .9)
 .right
-	float: right
+	float: left
 	width: 700px
+.right__col-1
+	float: left
+	width: 540px
+	padding: 20px
+	background: #FFF 
+.right__col-2
+	overflow: hidden
+	margin-top: 240px
+	padding-left: 33px
 
 
 

@@ -13,7 +13,8 @@
 				padding-right: 16px
 				font-weight: bold
 				display: block
-				&:after, i
+				&:after
+					content: ""
 					display: inline-block
 					+s(arr-act)
 					margin-left: 5px 
@@ -23,36 +24,18 @@
 			color: #000 
 			text-transform: uppercase
 			display: block
-//news
-.news
-	margin-bottom: 40px
-	.h2
-		text-align: left
-		line-height: 1
-.news_main
-	.h2
-		text-align: center
-		line-height: 1.4 
-	.news__list
-		margin: 0
-	.news__item
-		width: 300px
-	.news__pic
-		width: 300px
-		height: 150px
-	.news__title
-		font-size: 18px
-.news__list
+//list
+.list
 	padding-left: 10px
 	margin: 0 -20px
 	font-size: 0
-.news__item
+.list__item
 	display: inline-block
 	width: 220px
-	padding: 0 10px 50px 10px
+	margin: 0 10px 50px 10px
 	vertical-align: top	
 	&:hover
-		.news__pic
+		.list__pic
 			&:before
 				content: ""
 				position: absolute
@@ -61,11 +44,11 @@
 				bottom: 0
 				right: 0
 				border: 5px solid #00b4ff
-		.news__title
+		.list__title
 			color: #00b4ff
 			span
 				color: #000 
-.news__pic
+.list__pic
 	position: relative
 	width: 220px
 	height: 130px
@@ -73,47 +56,175 @@
 	background: #f3f3f3 
 	img
 		display: block		
-.news__title
+.list__title
 	font-size: 14px
 	color: #007cb0
 	span
 		display: block
 		padding-top: 10px
 		font-size: 12px
-		color: #9f9f9f  
-//projects
-.projects
-	margin-bottom: 40px
-.projects__list
-	padding-left: 10px
-	font-size: 0
-.projects__item
-	display: inline-block
-	width: 300px
-	padding: 0 10px 50px 10px
-	vertical-align: top	
+		color: #9f9f9f 
+//content
+.content
+	font-size: 16px 
+	color: #403f3f
+	line-height: 1.4
+	p
+		margin-bottom: 1.3em  
+	figure
+		margin: 20px 0 
+		img
+			display: block
+		figcaption
+			padding: 14px 
+			font-size: 14px 
+			background: #F6F6F6
+			display: block
+	.figure_right
+		float: right
+		margin-right: -150px 
+		width: 300px 
+		margin-left: 20px 
+		img
+			width: 100% 
+	.related
+		float: right
+		width: 300px - 40px - 8px
+		margin-right: -150px  
+		margin-left: 20px
+		margin-top: 20px  
+		margin-bottom: 20px 
+	.fotos
+		margin: 20px -180px 20px -260px
+		position: relative 
+	.years
+		+font-reg
+		font-size: 30px
+		color: #645f63 
+//fotos
+.fotos
+	.fotos__title
+		+font-thin
+		font-weight: normal
+		text-align: center
+		font-size: 36px 
+		margin-bottom: 20px 
+		text-transform: uppercase
+	.fotos__item
+		float: left
+		width: 140px 
+		height: 130px 
+		margin-right: 20px 
+		img
+			display: block
+			background: #ccc 
+	.fotos__caro
+		position: relative
+		margin-left: 32px 
+		width: 940px 
+		overflow: hidden
+		height: 130px 
+		.fotos__slides
+			position: absolute
+			left: 0 
+			top: 0 
+			width: 20000em 
+	.fotos__next, .fotos__prev
+		position: absolute
+		bottom: 48px 
+		cursor: pointer
+	.fotos__next
+		+s(fotos__next)
+		right: -23px
+	.fotos__prev
+		+s(fotos__prev)
+		left: 0 
+//related
+.related
+	border: 4px solid #C2C2C2
+	padding: 20px 
 	text-align: center
-	span
-		font-size: 20px
-		color: #007cb0
-	&:hover
-		.projects__pic
+	.related__title
+		font-size: 18px
+		color: #000 
+		+font-light
+		margin-bottom: 15px 
+		text-transform: uppercase
+	.related__list
+		list-style: none
+		font-size: 16px
+		a
+			color: #000 
+			display: block
+			padding-top: 22px 
+			margin-bottom: 10px 
+			position: relative
 			&:before
-				content: ""
+				content: ' '
 				position: absolute
+				left: 50% 
 				top: 0
-				left: 0
-				bottom: 0
-				right: 0
-				border: 5px solid #00b4ff
-		span
-			color: #00b4ff
-.projects__pic
+				+s(bul) 
+//tags
+.tags
 	position: relative
-	width: 300px
-	height: 210px
-	margin-bottom: 10px
-	background: #f3f3f3 
-	img
+	margin-bottom: 45px
+	font-size: 14px 
+	color: #8D8D8D
+	+font-thin	 
+	a
 		display: block
+		color: #8D8D8D
+		text-decoration: underline
+.tags__icon
+	position: absolute
+	left: -33px 
+	top: 3px
+	+s(tags)
+//likes
+.likes
+	margin-bottom: 20px
+//
+.anonses
+	@extend %clr
+	margin-right: -20px 
+	margin-bottom: 20px 
+	.anonses__head
+		font-size: 45px 
+		+font-thin
+		font-weight: normal
+		line-height: 1.3
+		margin-bottom: 20px 
+		text-transform: uppercase
+.anons
+	float: left
+	cursor: pointer
+	margin: 0 20px 20px 0 
+	width: 220px - 8px - 10px
+	height: 196px - 20px
+	padding: 20px  5px 0 5px
+	border: 4px solid #00A1DC
+	text-align: center
+	color: #3F3F3F 
+	&:hover
+		border-color: #000 
+	.anons__date
+		font-size: 16px 
+		font-weight: bold
+		color: #000 
+		margin-bottom: 15px 
+		padding-bottom: 20px 
+		position: relative
+		&:before
+			content: ' '
+			position: absolute
+			left: 50% 
+			margin-left: -5px 
+			+s(bul)
+			bottom: 0 
+
+	.anons__content
+		font-size: 16px 
+		line-height: 1.4 
+
 		

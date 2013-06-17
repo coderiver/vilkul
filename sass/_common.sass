@@ -47,17 +47,23 @@ table
 	height: 285px
 	clear: both
 .h2, .h3
-	margin-bottom: 18px
+	margin-bottom: 20px
 	+font-thin
 	font-size: 40px
 	font-weight: normal
-	text-align: center
 	text-transform: uppercase
+	line-height: 1
 	color: #000 
 .h2
-	font-size: 40px
+	font-size: 45px
 .h3
-	font-size: 30px
+	font-size: 36px
+.h4
+	margin-bottom: 25px
+	text-transform: uppercase
+	font-weight: normal
+	font-size: 24px
+	color: #454545 
 //header
 .header
 	position: relative
@@ -101,15 +107,15 @@ table
 		&:last-child
 			width: 200px
 	li
-		padding-left: 5px
+		padding: 2px 0 0 5px
 		margin-bottom: 5px
 		line-height: 1.2
 		&:first-child
 			font-size: 24px
-			&.is-active
-				background: #a2a2a2
-				a
-					color: #fff  
+		&.is-active
+			background: #a2a2a2
+			a
+				color: #fff  
 	a
 		+font-reg
 		color: $blue
@@ -234,7 +240,9 @@ table
 //digit-day
 .digit-day
 	.h3
-		margin-bottom: 0
+		margin-bottom: 5px
+		font-size: 30px
+		text-align: center
 		color: #858585 
 .digit-day__in
 	border: 6px solid #adadad
@@ -267,7 +275,9 @@ table
 //announcement
 .announcement
 	.h3
-		margin-bottom: 0
+		margin-bottom: 5px
+		font-size: 30px
+		text-align: center
 		color: #007cb0 
 .announcement__in
 	position: relative
@@ -399,4 +409,29 @@ table
 	+s(prev)
 .pagination__next
 	+s(next)
-		  
+//bread
+.bread
+	text-transform: uppercase
+	color: #000000
+	+font-reg
+	font-size: 18px 
+	margin-bottom: 10px
+	line-height: 1
+	a
+		color: #000		
+		text-decoration: none
+		&.bread__parent
+			color: #959595 
+	i
+		+s(bread)
+		margin: 0 6px
+		vertical-align: middle 
+		display: inline-block
+		position: relative
+		top: -3px 
+		right: -1px 
+//published
+.published
+	font-size: 14px 
+	color: #969696
+	margin-bottom: 20px 
