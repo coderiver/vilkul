@@ -4,11 +4,11 @@
 .menu
 	margin-bottom: 35px
 	li
-		padding-bottom: 15px
+		padding: 0 20px 15px 0
 		margin-bottom: 15px
 		border-bottom: 1px solid #b6b6b6 
-		&.is-active
-			a
+		a
+			&.is-active
 				position: relative
 				padding-right: 16px
 				font-weight: bold
@@ -18,6 +18,19 @@
 					display: inline-block
 					+s(arr-act)
 					margin-left: 5px 
+		ul
+			margin: 5px 0 -5px 0
+		li
+			border: none
+			padding: 0
+			margin-bottom: 2px
+			a				
+				font-size: 18px
+				text-transform: none
+			ul
+				padding-left: 20px
+				a
+					font-size: 16px
 		a
 			+font-thin
 			font-size: 22px
@@ -29,6 +42,9 @@
 	padding-left: 10px
 	margin: 0 -20px
 	font-size: 0
+.list_photos
+	.list__title
+		color: #5c5c5c 
 .list__item
 	display: inline-block
 	width: 220px
@@ -101,6 +117,15 @@
 		+font-reg
 		font-size: 30px
 		color: #645f63 
+//link
+.link
+	padding: 30px 0		
+	white-space: nowrap
+	overflow: hidden
+	text-overflow: ellipsis  
+	a
+		font-size: 12px
+		color: #707070
 //fotos
 .fotos
 	.fotos__title
@@ -226,5 +251,260 @@
 	.anons__content
 		font-size: 16px 
 		line-height: 1.4 
+//press
+.press
+	margin-bottom: 60px
+	li
+		position: relative
+		padding-top: 50px
+		&:after
+			content: ""
+			position: absolute
+			left: 50%
+			top: 10px
+			margin-left: -6px
+			+s(list)
+		&:first-child
+			padding: 0
+			&:after
+				display: none
+	a
+		font-size: 24px
+		color: #007cb0 
+		line-height: 1.2
+	p
+		padding: 10px 0
+	span
+		font-size: 12px
+		color: #9f9f9f 
+//reporter
+.reporter
+	width: 340px
+	padding: 20px
+	background: #f4f4f4
+.reporter__pic
+	float: left
+	width: 40px
+	height: 40px
+	background: #dadada  
+	margin-right: 20px
+	img
+		display: block
+.reporter__info
+	overflow: hidden
+	a
+		font-size: 16px
+		font-weight: bold
+		text-transform: uppercase
+		color: #000 
+	p
+		margin-top: 2px
+		line-height: 1.5
+//projects
+.projects
+	.h3
+		margin-bottom: 10px
+		text-align: center
+		font-size: 30px
+		line-height: 1.4
+	.list
+		text-align: center
+.projects__list	 
+	.list
+		margin: 0
+		padding: 0
+		margin: 0 -10px
+	.list__item
+		width: 300px
+	.list__title	
+		text-align: center
+		font-size: 20px
+	.list__pic
+		width: 300px
+		height: 210px	
+.projects__types
+	margin-bottom: 30px
+	overflow: hidden
+	a
+		float: left
+		width: 220px
+		margin-right: 20px
+		padding-bottom: 10px
+		border-bottom: 1px solid #b6b6b6
+		+font-light
+		font-size: 22px
+		color: #000
+		text-transform: uppercase
+.projects__desc
+	padding-bottom: 50px
+	font-size: 16px 
+//result
+.result
+	width: 700px
+	margin-bottom: 60px
+	.h2
+		margin-bottom: 65px
+.result__form
+	margin-bottom: 55px
+	overflow: hidden
+	input
+		float: left
+		width: 518px
+		height: 51px
+		margin-right: 20px
+		padding: 0 10px
+		border: 1px solid #adadad
+		+font-thin
+		font-size: 36px
+		text-transform: uppercase
+	button
+		float: left
+		height: 53px
+		padding: 0 32px
+		background: #0084bb 
+		i
+			display: block
+			+s(btn-search-big)
+.result__value	
+	margin-bottom: 50px 
+	font-size: 16px
+.result__list
+	li
+		margin-bottom: 40px
+.result__pic, .result__video
+	float: left
+	margin-right: 20px
+	img
+		display: block
+.result__video
+	position: relative
+	background: #000 
+	img
+		opacity: .5 
+	&:before, &:after
+		content: ""
+		position: absolute
+		top: 50%
+		left: 50%
+	&:before
+		width: 46px
+		height: 46px 
+		margin: -23px 0 0 -23px
+		background: #FFF
+		border-radius: 50%
+		z-index: 10  
+	&:after
+		width: 0px
+		height: 0px
+		margin: -11px 0 0 -8px
+		border-style: solid
+		border-width: 12px 0 12px 20px
+		border-color: transparent transparent transparent #000000
+		z-index: 15 
+.result__data
+	overflow: hidden
+.result__title
+	margin-bottom: 10px
+	a
+		font-weight: bold
+		font-size: 22px
+		color: #007cb0 
+		line-height: 1
+.result__detail
+	color: #9f9f9f
+	font-size: 12px
+	a
+		font-size: 12px
+		text-decoration: underline
+		color: #9f9f9f
+//tag
+.tag
+	.h2
+		margin-bottom: 40px
+.tag__item
+	margin-bottom: 60px
+	overflow: hidden
+	.all
+		padding-top: 15px
+		overflow: hidden
+		text-align: left
+.tag__pic
+	float: left
+	margin-right: 20px
+	img
+		display: block
+.tag__desc
+	overflow: hidden
+	a
+		font-size: 32px
+		color: #007cb0
+	p
+		margin-top: 10px
+		font-size: 18px
+.tag__video
+	.list__pic
+		background: #000
+		img
+			opacity: .5 
+		&:before, &:after
+			content: ""
+			position: absolute
+			top: 50%
+			left: 50%
+		&:before
+			width: 46px
+			height: 46px 
+			margin: -23px 0 0 -23px
+			background: #FFF
+			border-radius: 50%
+			border: none
+			z-index: 10  
+		&:after
+			width: 0px
+			height: 0px
+			margin: -11px 0 0 -8px
+			border-style: solid
+			border-width: 12px 0 12px 20px
+			border-color: transparent transparent transparent #000000
+			z-index: 15
+	.list__item
+		&:hover
+			.list__pic
+				background: #000
+				img
+					opacity: .5 
+				&:before, &:after
+					content: ""
+					position: absolute
+					top: 50%
+					left: 50%
+				&:before
+					width: 46px
+					height: 46px 
+					margin: -23px 0 0 -23px
+					background: #FFF
+					border-radius: 50%
+					border: none
+					z-index: 10  
+				&:after
+					width: 0px
+					height: 0px
+					margin: -11px 0 0 -8px
+					border-style: solid
+					border-width: 12px 0 12px 20px
+					border-color: transparent transparent transparent #000000
+					z-index: 15 
+.tag__news
+	margin-bottom: 60px
+	li
+		margin-bottom: 40px
+	a
+		line-height: 1
+		font-size: 22px
+		color: #007cb0
+	span
+		display: block
+		margin-top: 10px
+		font-size: 12px
+		color: #9f9f9f 
 
-		

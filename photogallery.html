@@ -29,7 +29,7 @@
 		</div>
 		<nav class="nav">
 			<ul>
-				<li class="is-active"><a href="#">Новини</a></li>
+				<li><a href="#">Новини</a></li>
 				<li><a href="#">Анонси</a></li>
 				<li><a href="#">архів новин</a></li>
 				<li><a href="#">Підписка на новини</a></li>
@@ -38,7 +38,7 @@
 				<li><a href="#">о. Вілкул</a></li>
 				<li><a href="#">Біографія</a></li>
 				<li><a href="#">У ЗМІ</a></li>
-				<li><a href="#">Фотогалерея</a></li>
+				<li class="is-active"><a href="#">Фотогалерея</a></li>
 				<li><a href="#">Відео та аудіо</a></li>				
 			</ul>
 			<ul>
@@ -61,98 +61,24 @@
 			<!-- BEGIN .menu -->
 			<nav class="menu">
 				<ul>
-					<li><a class="is-active" href="#">Новини</a></li>
-					<li><a href="#">Анонси</a></li>
-					<li><a href="#">Архів новин</a></li>				
+					<li><a href="#">Біографія</a></li>
+					<li><a href="#">у ЗМІ</a></li>
+					<li>
+						<a href="#">Фотогалерея</a>
+						<ul>
+							<li><a class="is-active" href="#">Офіційні фотографії</a></li>
+							<li><a href="#">Діяльність</a></li>
+							<li><a href="#">Особисті фотографії</a></li>
+						</ul>
+					</li>		
+					<li><a href="#">Відео та аудіо</a></li>		
 				</ul>
 			</nav>
-			<!-- END .menu -->
-			<!-- BEGIN .calendar -->
-			<div class="calendar calendar_aside">
-				<div class="calendar__month"><button>Травень 2013<i></i></button></div>
-				<div class="calendar__slider">
-					<button class="calendar__prev"></button>
-					<button class="calendar__next"></button>
-					<div class="calendar__days">
-						<ul>
-							<li>1</li>
-							<li>2</li>
-							<li>3</li>
-							<li class="is-red">4</li>
-							<li class="is-red">5</li>
-							<li>6</li>
-							<li>7</li>
-							<li>8</li>
-							<li>9</li>
-							<li>10</li>
-							<li>11</li>
-							<li class="is-red">12</li>
-							<li class="is-red">13</li>
-							<li>14</li>
-							<li>15</li>
-							<li>16</li>
-							<li>17</li>
-							<li class="is-red">18</li>
-							<li class="is-red">19</li>
-							<li>20</li>
-							<li class="is-selected">21</li>
-							<li class="no-active">22</li>
-							<li class="no-active">23</li>
-							<li class="no-active">24</li>
-							<li class="no-active-red">25</li>
-							<li class="no-active-red">26</li>
-							<li class="no-active">27</li>
-							<li class="no-active">28</li>
-							<li class="no-active">29</li>
-							<li class="no-active">30</li>
-							<li class="no-active">31</li>
-							<li class="no-active">1</li>
-							<li class="no-active">2</li>
-							<li class="no-active">3</li>
-							<li class="no-active">4</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<!-- END .calendar -->
-			<!-- BEGIN .announcement -->
-			<div class="announcement announcement_aside">
-				<h3 class="h3">АНОНСИ</h3>
-				<div class="announcement__in">
-					<ul class="announcement__slider">
-						<li>23 травня Олександр Вілкул в Берліні проведе засідання українсько-німецької Групи високого рівня</li>
-					</ul>
-					<div class="announcement__navi">
-						<a href=""></a>
-						<a href=""></a>
-						<a class="is-active" href=""></a>
-						<a href=""></a>
-						<a href=""></a>
-					</div>
-				</div>
-			</div>
-			<!-- END .announcement -->			
-			<!-- BEGIN .digit-day -->
-			<div class="digit-day digit-day_aside">
-				<h3 class="h3">Цифра дня</h3>
-				<div class="digit-day__in">
-					<span>6 000</span>
-					<p>така кількість українських сімей отримали квартири за підтримки держави на протязі 2010 - 2012 рр.</p>
-				</div>
-			</div>
-			<!-- END .digit-day -->	
-			<!-- BEGIN .subscribe -->
-			<div class="subscribe subscribe_aside">
-				<label>
-					<span>Підписка на новини</span>
-					<input type="text" placeholder="Ваш e-mail">
-					<button>ok</button>
-				</label>
-			</div>
-			<!-- END .subscribe -->		
+			<!-- END .menu -->			
 		</aside>
 		<div class="right right_big">
-			<h2 class="h2">Новини</h2>
+			<div class="bread"><a class="bread__parent" href="#">о. Вілкул</a><i></i><a href="#">фотогалерея</a></div>
+			<h2 class="h2">Офіційні фотографії</h2>
 			<div class="list">
 				<a class="list__item" href="#">
 					<div class="list__pic">
