@@ -43,6 +43,48 @@ table
 	height: auto !important
 	height: 100%
 	margin: 0 auto -285px
+.wrap_scroll
+	padding-top: 180px	
+	.header
+		position: fixed
+		top: 0
+		left: 50%
+		width: 980px 
+		height: 83px
+		margin-left: -490px
+		background: #FFF 		
+		z-index: 1000 
+		&:before, &:after
+			content: ""
+			position: absolute
+			top: 0
+			left: -2000px
+			right: -2000px
+			height: 83px
+			background: #fff
+			box-shadow: 0 1px 6px rgba(0,0,0,.26)
+			border-bottom: 1px solid #a9a9a9 
+			z-index: -10  
+	.search
+		display: none 
+	.nav
+		margin-top: 26px
+		li
+			display: none
+			&:first-child
+				display: block 
+	.logo
+		margin: 31px 0 0 20px
+		span
+			display: none
+	.home
+		top: 26px
+	.social
+		width: 50px
+		margin-top: 23px
+		a
+			float: left
+			margin: 0 0 5px 5px
 .push
 	height: 285px
 	clear: both
@@ -435,3 +477,178 @@ table
 	font-size: 14px 
 	color: #969696
 	margin-bottom: 20px 
+//colorbox
+.js-cb
+	outline: none
+#colorbox, #cboxOverlay, #cboxWrapper
+	position: absolute
+	top: 0
+	left: 0
+	z-index: 9999
+	//overflow: hidden
+#cboxOverlay
+	position: fixed
+	width: 100%
+	height: 100%
+#cboxMiddleLeft, #cboxBottomLeft
+	clear: left
+#cboxContent
+	position: relative
+#cboxLoadedContent
+	position: relative
+	//overflow: auto
+	overflow: visible !important
+	-webkit-overflow-scrolling: touch
+	// &:before, &:after
+	// 	content: ""
+	// 	position: absolute
+	// 	top: 50%
+	// 	margin-top: -48px 
+	// &:before
+	// 	left: 0
+	// 	+s(cb-prev-big)
+	// &:after
+	// 	right: 0
+	// 	+s(cb-next-big)
+#cboxHead
+	position: absolute
+	bottom: 103%
+	left: 0
+	z-index: 1000
+	color: #FFF 
+	font-size: 18px
+#cboxLoad
+	position: absolute
+	right: 60px
+	bottom: -36px
+	a
+		position: relative
+		padding-left: 25px
+		font-size: 14px
+		color: #0084bb
+		text-decoration: underline
+		&:before
+			content: ""
+			position: absolute
+			top: -5px
+			left: 0
+			+s(cb-load) 
+#cboxTitle
+	margin: 0
+#cboxLoadingOverlay, #cboxLoadingGraphic
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow
+	cursor: pointer
+.cboxPhoto
+	float: left
+	margin: auto
+	border: 0
+	display: block
+	max-width: none
+	-ms-interpolation-mode: bicubic
+.cboxIframe
+	width: 100%
+	height: 100%
+	display: block
+	border: 0
+#colorbox, #cboxContent, #cboxLoadedContent
+	box-sizing: content-box
+	-moz-box-sizing: content-box
+	-webkit-box-sizing: content-box
+#cboxOverlay
+	background: #000
+#colorbox
+	outline: 0
+#cboxTopLeft
+	width: 8px
+	height: 8px
+	background: #fff
+#cboxTopCenter
+	height: 8px
+	background: #fff
+#cboxTopRight
+	width: 8px
+	height: 8px
+	background: #fff
+#cboxBottomLeft
+	width: 8px
+	height: 53px
+	background: #fff
+#cboxBottomCenter
+	height: 53px
+	background: #fff
+#cboxBottomRight
+	width: 8px
+	height: 53px
+	background: #fff
+#cboxMiddleLeft
+	width: 8px
+	background: #fff
+#cboxMiddleRight
+	width: 8px
+	background: #fff
+#cboxContent
+	background: #fff
+	overflow: visible
+.cboxIframe
+	background: #fff
+#cboxError
+	padding: 50px
+	border: 1px solid #ccc
+#cboxLoadingOverlay
+	background: url(../img/loading_background.png) no-repeat center center
+#cboxLoadingGraphic
+	background: url(../img/loading.gif) no-repeat center center
+#cboxTitle
+	position: absolute
+	bottom: -35px
+	left: 150px
+	right: 200px 
+	color: #000
+	font-size: 14px
+#cboxCurrent
+	position: absolute
+	bottom: -35px
+	left: 59px
+	width: 50px
+	font-weight: bold
+	text-align: center
+	color: #000
+#cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose
+	border: 0
+	padding: 0
+	margin: 0
+	overflow: visible
+	position: absolute
+	text-indent: -9999px
+#cboxPrevious:active, #cboxNext:active, #cboxSlideshow:active, #cboxClose:active
+	outline: 0
+#cboxPrevious
+	left: 40px
+	bottom: -37px	
+#cboxNext
+	left: 105px
+	bottom: -37px
+#cboxClose
+	right: 0
+	bottom: -39px
+.cboxSlideshow_on #cboxSlideshow
+	left: 0px
+	bottom: -35px
+.cboxSlideshow_off #cboxSlideshow
+	left: 0px
+	bottom: -35px
+#cboxPrevious
+	+s(cb-prev)
+#cboxNext
+	+s(cb-next)
+.cboxSlideshow_on #cboxSlideshow
+	+s(cb-pause)
+.cboxSlideshow_off #cboxSlideshow
+	+s(cb-play)
+#cboxClose
+	+s(cb-close)
