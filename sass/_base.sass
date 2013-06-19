@@ -52,6 +52,13 @@ $icons: sprite-map("icons/*.png", $spacing: 10px)
 	-webkit-transform: rotate($deg + deg)
 	-ms-transform: rotate($deg + deg)
 	transform: rotate($deg + deg)
+//transition
+@mixin transition($what)
+	-moz-transition: $what
+	-o-transition: $what
+	-webkit-transition: $what
+	-ms-transition: $what
+	transition: $what
 //fonts
 @font-face
 	font-family: 'pfdin_light'

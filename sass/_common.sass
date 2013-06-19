@@ -17,8 +17,10 @@ body
 a img, fieldset 
 	border: none
 a
+	color: #007CB0 
 	text-decoration: none
 	&:hover
+		color: #009fe1
 p
 	line-height: 1.2
 li 
@@ -115,6 +117,8 @@ table
 	top: 36px
 	left: 355px
 	+s(home) 
+	&:hover
+		+s(home-h)
 .logo
 	float: left
 	margin: 41px 0 0 20px 	
@@ -131,6 +135,8 @@ table
 	a
 		display: block
 		margin-bottom: 5px
+		&:hover
+			opacity: .6 
 .social__fb
 	+s(fb)
 .social__tw
@@ -162,6 +168,8 @@ table
 		+font-reg
 		color: $blue
 		text-transform: uppercase 
+		&:hover
+			color: #000 
 .nav_mod
 	margin-right: 20px
 	margin-top: 44px
@@ -326,9 +334,11 @@ table
 	min-height: 60px
 	padding: 25px 18px 45px 18px
 	border: 6px solid $blue
-.announcement__slider
-	text-align: center
+.announcement__slider	
 	font-size: 18px
+	text-align: center
+	li
+		width: 412px
 .announcement__navi
 	position: absolute
 	left: 0
@@ -336,7 +346,7 @@ table
 	bottom: 20px 
 	text-align: center
 	font-size: 0
-	a
+	span
 		display: inline-block
 		width: 9px
 		height: 9px
@@ -344,7 +354,8 @@ table
 		background: #f4f4f4
 		box-shadow: 1px 1px 3px rgba(0,0,0,.4) inset
 		+rotate(45)
-		&.is-active
+		cursor: pointer
+		&.cycle-pager-active
 			background: #66c5ed   
 .announcement_aside	
 	margin-bottom: 20px
@@ -377,9 +388,13 @@ table
 	.calendar__prev
 		left: 13px
 		+s(prev-s)
+		&:hover
+			+s(prev-s-h)
 	.calendar__next
 		right: 13px
 		+s(next-s)
+		&:hover
+			+s(next-s-h)
 .calendar__month
 	margin-bottom: 5px
 	text-align: center
@@ -403,9 +418,13 @@ table
 .calendar__prev
 	left: 14px
 	+s(prev)
+	&:hover
+		+s(prev-h)
 .calendar__next
 	right: 14px
 	+s(next)
+	&:hover
+		+s(next-h)
 .calendar__days
 	ul
 		font-size: 0
@@ -418,6 +437,8 @@ table
 		font-size: 17px
 		color: #007cb0 
 		cursor: pointer
+		&:hover
+			text-decoration: underline
 		&.is-red
 			color: #ff3600
 		&.is-selected

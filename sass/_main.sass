@@ -3,15 +3,22 @@
 .main
 	position: relative
 	margin-bottom: 50px
+.main__pic
 	img
 		display: block
+	&:hover
+		.main__title
+			width: 520px
+			strong
+				font-size: 29px
 .main__title
 	position: absolute
 	bottom: 0
 	left: 0
 	width: 440px
 	padding: 25px 20px
-	background: rgba(0,0,0,.6) 
+	background: rgba(0,0,0,.6) 	
+	+transition(all .2s ease)	
 	span
 		padding: 0 3px
 		background: $blue
@@ -19,6 +26,7 @@
 	strong
 		display: block
 		padding-top: 5px
+		+transition(all .2s ease)
 		font-size: 25px
 		font-weight: normal
 		line-height: 1.2
@@ -34,6 +42,11 @@
 	a
 		display: block
 		margin-bottom: 20px
+		&:hover
+			img
+				border-color: #009fe1
+			span
+				color: #90deff 
 	img
 		margin-bottom: 3px
 		border: 3px solid #fff

@@ -7,6 +7,8 @@
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
 	<!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.cycle2.min.js"></script>
+	<script src="js/jquery.colorbox-min.js"></script>
 	<script src="js/common.js"></script>
 </head>
 <body>
@@ -56,10 +58,13 @@
 	<!-- END .header -->
 	<!-- BEGIN .main -->
 	<div class="main">
-		<a class="main__title" href="#">
-			<span>12 травня</span>
-			<strong>Олександр Вілкул разом з головою Дитячого фонду ООН (ЮНІСЕФ) в Україні Юкіе Мокуо, розпочали всеукраїнську акцію</strong>
-		</a>
+		<a class="main__pic" href="#">
+			<img src="img/main.jpg" alt="">
+			<div class="main__title">
+				<span>12 травня</span>
+				<strong>Олександр Вілкул разом з головою Дитячого фонду ООН (ЮНІСЕФ) в Україні Юкіе Мокуо, розпочали всеукраїнську акцію</strong>
+			</div>
+		</a>		
 		<div class="main__news">
 			<a href="#">
 				<img src="img/news1.jpg" alt="">
@@ -69,8 +74,7 @@
 				<img src="img/news2.jpg" alt="">
 				<span>Олександр Вілкул провів зустріч з Прем'єр-міністром Федеральної землі Бранденбург Матіасом Платцеком</span>
 			</a>
-		</div>
-		<img src="img/main.jpg" alt="">
+		</div>		
 	</div>
 	<!-- END .main -->
 	<!-- BEGIN .main-box -->
@@ -88,16 +92,12 @@
 		<div class="announcement">
 			<h3 class="h3">АНОНСИ</h3>
 			<div class="announcement__in">
-				<ul class="announcement__slider">
-					<li>23 травня Олександр Вілкул в Берліні проведе засідання українсько-німецької Групи високого рівня</li>
+				<ul class="announcement__slider cycle-slideshow" data-cycle-fx="fade" data-cycle-timeout="0" data-cycle-slides="> li" data-cycle-pager="#navi-announs">
+					<li><a href="#">23 травня Олександр Вілкул в Берліні проведе засідання українсько-німецької Групи високого рівня</a></li>
+					<li><a href="#">Новый анонс</a></li>
+					<li><a href="#">Самый новый анонс</a></li>
 				</ul>
-				<div class="announcement__navi">
-					<a href=""></a>
-					<a href=""></a>
-					<a class="is-active" href=""></a>
-					<a href=""></a>
-					<a href=""></a>
-				</div>
+				<div id="navi-announs" class="announcement__navi"></div>
 			</div>
 		</div>
 		<!-- END .announcement -->
