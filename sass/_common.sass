@@ -2,6 +2,7 @@
 * 
 	margin: 0
 	padding: 0 
+	//box-shadow: 0 0 5px red
 	//-webkit-text-size-adjust: none
 html, body 
 	height: 100%
@@ -45,6 +46,8 @@ table
 	height: auto !important
 	height: 100%
 	margin: 0 auto -285px
+.wrap_p404
+	margin: 0 auto 0
 .wrap_scroll
 	padding-top: 180px	
 	.header
@@ -67,26 +70,26 @@ table
 			box-shadow: 0 1px 6px rgba(0,0,0,.26)
 			border-bottom: 1px solid #a9a9a9 
 			z-index: -10  
-	.search
-		display: none 
-	.nav
-		margin: 26px 15px 0 0
-		li
-			display: none
-			&:first-child
-				display: block 
-	.logo
-		margin: 31px 0 0 20px
-		span
-			display: none
-	.home
-		top: 26px
-	.social
-		width: 50px
-		top: 23px
-		a
-			float: left
-			margin: 0 0 5px 5px
+		.nav
+			margin: 26px 15px 0 0
+			li
+				display: none
+				&:first-child
+					display: block 
+		.search
+			display: none 	
+		.logo
+			margin: 31px 0 0 20px
+			span
+				display: none
+		.home
+			top: 26px
+		.social
+			width: 50px
+			top: 23px
+			a
+				float: left
+				margin: 0 0 5px 5px
 .push
 	height: 285px
 	clear: both
@@ -112,6 +115,8 @@ table
 .header
 	position: relative
 	height: 180px
+.header_p404
+	height: 120px 
 .home
 	position: absolute
 	top: 36px
@@ -146,6 +151,20 @@ table
 	+s(yt)
 .social__rss
 	+s(rss)
+.social_big
+	position: relative
+	top: auto
+	right: auto
+	overflow: hidden
+	a
+		float: left
+		margin: 0 20px 0 0
+	.social__fb
+		+s(fb-b)
+	.social__tw
+		+s(tw-b)
+	.social__yt
+		+s(yt-b)
 .nav
 	float: right
 	margin: 36px 15px 0 0
@@ -208,6 +227,23 @@ table
 	border-top: 40px solid #bdbdbd
 	box-shadow: 0 0 0 5px $blue
 	background: #d4d4d4 
+.footer_p404
+	border: none
+	box-shadow: none
+	background: #FFF 
+	.footer__in
+		width: 960px
+		height: 76px
+		margin-bottom: 20px
+		border-style: solid
+		border-color: #009fe1
+		border-width: 0 10px 20px 10px
+	.copyright
+		top: 0
+		left: 40px
+	.created
+		top: 30px
+		left: 55px
 .footer__in
 	position: relative
 	width: 980px
