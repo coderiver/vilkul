@@ -38,13 +38,13 @@ table { border-spacing: 0; border-collapse: collapse; }
 .wrap_scroll .header { position: fixed; top: 0; left: 50%; width: 980px; height: 83px; margin-left: -490px; background: white; z-index: 1000; }
 .wrap_scroll .header:before, .wrap_scroll .header:after { content: ""; position: absolute; top: 0; left: -2000px; right: -2000px; height: 83px; background: white; box-shadow: 0 1px 6px rgba(0, 0, 0, 0.26); border-bottom: 1px solid darkgrey; z-index: -10; }
 .wrap_scroll .search { display: none; }
-.wrap_scroll .nav { margin-top: 26px; }
+.wrap_scroll .nav { margin: 26px 15px 0 0; }
 .wrap_scroll .nav li { display: none; }
 .wrap_scroll .nav li:first-child { display: block; }
 .wrap_scroll .logo { margin: 31px 0 0 20px; }
 .wrap_scroll .logo span { display: none; }
 .wrap_scroll .home { top: 26px; }
-.wrap_scroll .social { width: 50px; margin-top: 23px; }
+.wrap_scroll .social { width: 50px; top: 23px; }
 .wrap_scroll .social a { float: left; margin: 0 0 5px 5px; }
 
 .push { height: 285px; clear: both; }
@@ -67,7 +67,7 @@ table { border-spacing: 0; border-collapse: collapse; }
 
 .logo__name { background: url('../img/icons-sc22e5626dd.png') 0 0 no-repeat; width: 302px; height: 33px; }
 
-.social { float: right; margin-top: 43px; }
+.social { position: absolute; top: 43px; right: 0; }
 .social a { display: block; margin-bottom: 5px; }
 .social a:hover { opacity: 0.6; }
 
@@ -79,7 +79,7 @@ table { border-spacing: 0; border-collapse: collapse; }
 
 .social__rss { background: url('../img/icons-sc22e5626dd.png') 0 -890px no-repeat; width: 20px; height: 20px; }
 
-.nav { float: right; margin-top: 36px; }
+.nav { float: right; margin: 36px 15px 0 0; }
 .nav ul { float: left; width: 140px; padding-right: 20px; }
 .nav ul:last-child { width: 200px; }
 .nav li { padding: 2px 0 0 5px; margin-bottom: 5px; line-height: 1.2; }
@@ -144,6 +144,8 @@ table { border-spacing: 0; border-collapse: collapse; }
 
 .announcement__slider { font-size: 18px; text-align: center; }
 .announcement__slider li { width: 412px; }
+.announcement__slider a { display: block; color: black; }
+.announcement__slider a:hover { color: #009fe1; }
 
 .announcement__navi { position: absolute; left: 0; right: 0; bottom: 20px; text-align: center; font-size: 0; }
 .announcement__navi span { display: inline-block; width: 9px; height: 9px; margin: 0 9px; background: #f4f4f4; box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4) inset; -moz-transform: rotate(45deg); -o-transform: rotate(45deg); -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); cursor: pointer; }
@@ -152,45 +154,49 @@ table { border-spacing: 0; border-collapse: collapse; }
 .announcement_aside { margin-bottom: 20px; }
 .announcement_aside .announcement__in { padding: 15px 18px 45px 18px; }
 .announcement_aside .announcement__slider { font-size: 14px; }
+.announcement_aside .announcement__slider li { width: 172px; }
 
-.calendar { padding: 12px 0; margin: 0 20px 65px 20px; border: 1px solid #bebebe; }
-
-.calendar_aside { margin: 0 0 20px 0; }
-.calendar_aside .calendar__days ul { padding-left: 17px; text-align: left; }
-.calendar_aside .calendar__days li { width: 26px; text-align: center; font-size: 14px; text-align: center; }
-.calendar_aside .calendar__month { margin-bottom: 10px; }
-.calendar_aside .calendar__month button { font-size: 18px; }
-.calendar_aside .calendar__prev, .calendar_aside .calendar__next { top: -29px; }
-.calendar_aside .calendar__prev { left: 13px; background: url('../img/icons-sc22e5626dd.png') 0 -1263px no-repeat; width: 9px; height: 17px; }
-.calendar_aside .calendar__prev:hover { background: url('../img/icons-sc22e5626dd.png') 0 -679px no-repeat; width: 9px; height: 17px; }
-.calendar_aside .calendar__next { right: 13px; background: url('../img/icons-sc22e5626dd.png') 0 -1236px no-repeat; width: 9px; height: 17px; }
-.calendar_aside .calendar__next:hover { background: url('../img/icons-sc22e5626dd.png') 0 -652px no-repeat; width: 9px; height: 17px; }
+.calendar { padding: 12px 0; margin: 0 0 20px 0; border: 1px solid #bebebe; }
 
 .calendar .ui-datepicker-calendar { width: 100%; }
 .calendar .ui-datepicker-calendar thead { display: none; }
-.calendar .ui-datepicker-calendar tr { display: inline-block; }
 .calendar .ui-datepicker-calendar tbody { text-align: center; }
-.calendar .ui-datepicker-calendar tbody td { display: inline-block; width: 28px; padding: 2px 0; vertical-align: top; font-size: 17px; color: #007cb0; }
+.calendar .ui-datepicker-calendar tbody td { display: inline-block; width: 28px; padding: 2px 0; vertical-align: top; font-size: 14px; color: #007cb0; }
 .calendar .ui-datepicker-calendar tbody td a:hover { text-decoration: underline; }
 .calendar .ui-datepicker-calendar tbody td.ui-datepicker-week-end a { color: #ff3600; }
-.calendar .ui-datepicker-calendar tbody td.ui-datepicker-other-month { display: none; }
 .calendar .ui-datepicker-calendar tbody td.ui-datepicker-today { background: #009fe1; }
 .calendar .ui-datepicker-calendar tbody td.ui-datepicker-today a { color: white; }
 .calendar .ui-datepicker-calendar tbody td.ui-state-disabled { color: #a4a4a4; }
 .calendar .ui-datepicker-calendar tbody td.ui-state-disabled.ui-datepicker-week-end { color: #ff977b; }
-.calendar .ui-datepicker-prev, .calendar .ui-datepicker-next { position: absolute; top: 36px; z-index: 10; -moz-user-select: none; -webkit-user-select: none; user-select: none; }
+.calendar .ui-datepicker-prev, .calendar .ui-datepicker-next { position: absolute; top: 3px; z-index: 10; -moz-user-select: none; -webkit-user-select: none; user-select: none; }
 .calendar .ui-datepicker-prev .ui-icon-circle-triangle-w, .calendar .ui-datepicker-prev .ui-icon-circle-triangle-e, .calendar .ui-datepicker-next .ui-icon-circle-triangle-w, .calendar .ui-datepicker-next .ui-icon-circle-triangle-e { display: block; cursor: pointer; }
 .calendar .ui-datepicker-prev { left: 14px; }
-.calendar .ui-datepicker-prev .ui-icon-circle-triangle-w { background: url('../img/icons-sc22e5626dd.png') 0 -1202px no-repeat; width: 13px; height: 24px; }
-.calendar .ui-datepicker-prev:hover .ui-icon-circle-triangle-w { background: url('../img/icons-sc22e5626dd.png') 0 -618px no-repeat; width: 13px; height: 24px; }
-.calendar .ui-datepicker-prev.ui-state-disabled:hover .ui-icon-circle-triangle-w { background: url('../img/icons-sc22e5626dd.png') 0 -1202px no-repeat; width: 13px; height: 24px; cursor: default; }
+.calendar .ui-datepicker-prev .ui-icon-circle-triangle-w { background: url('../img/icons-sc22e5626dd.png') 0 -1263px no-repeat; width: 9px; height: 17px; }
+.calendar .ui-datepicker-prev:hover .ui-icon-circle-triangle-w { background: url('../img/icons-sc22e5626dd.png') 0 -679px no-repeat; width: 9px; height: 17px; }
+.calendar .ui-datepicker-prev.ui-state-disabled:hover .ui-icon-circle-triangle-w { background: url('../img/icons-sc22e5626dd.png') 0 -1263px no-repeat; width: 9px; height: 17px; cursor: default; }
 .calendar .ui-datepicker-next { right: 14px; }
-.calendar .ui-datepicker-next .ui-icon-circle-triangle-e { background: url('../img/icons-sc22e5626dd.png') 0 -1148px no-repeat; width: 13px; height: 24px; }
-.calendar .ui-datepicker-next:hover .ui-icon-circle-triangle-e { background: url('../img/icons-sc22e5626dd.png') 0 -584px no-repeat; width: 13px; height: 24px; }
-.calendar .ui-datepicker-next.ui-state-disabled:hover .ui-icon-circle-triangle-e { background: url('../img/icons-sc22e5626dd.png') 0 -1148px no-repeat; width: 13px; height: 24px; cursor: default; }
-.calendar .ui-datepicker-year { font-size: 24px; }
+.calendar .ui-datepicker-next .ui-icon-circle-triangle-e { background: url('../img/icons-sc22e5626dd.png') 0 -1236px no-repeat; width: 9px; height: 17px; }
+.calendar .ui-datepicker-next:hover .ui-icon-circle-triangle-e { background: url('../img/icons-sc22e5626dd.png') 0 -652px no-repeat; width: 9px; height: 17px; }
+.calendar .ui-datepicker-next.ui-state-disabled:hover .ui-icon-circle-triangle-e { background: url('../img/icons-sc22e5626dd.png') 0 -1236px no-repeat; width: 9px; height: 17px; cursor: default; }
+.calendar .ui-datepicker-year { font-size: 18px; }
 .calendar .ui-datepicker-header { position: relative; margin-bottom: 5px; text-align: center; }
-.calendar .ui-datepicker-header .ui-datepicker-title { display: inline-block; font-size: 24px; }
+.calendar .ui-datepicker-title { display: inline-block; font-size: 18px; }
+
+.calendar_wide { margin: 0 20px 65px 20px; }
+.calendar_wide .ui-datepicker-calendar tbody td { font-size: 17px; }
+.calendar_wide .ui-datepicker-calendar tr { display: inline-block; }
+.calendar_wide .ui-datepicker-calendar td.ui-datepicker-other-month { display: none; }
+.calendar_wide .ui-datepicker-title { font-size: 24px; }
+.calendar_wide .ui-datepicker-year { font-size: 24px; }
+.calendar_wide .ui-datepicker-prev, .calendar_wide .ui-datepicker-next { top: 39px; }
+.calendar_wide .ui-datepicker-prev { left: 14px; }
+.calendar_wide .ui-datepicker-prev .ui-icon-circle-triangle-w { background: url('../img/icons-sc22e5626dd.png') 0 -1202px no-repeat; width: 13px; height: 24px; }
+.calendar_wide .ui-datepicker-prev:hover .ui-icon-circle-triangle-w { background: url('../img/icons-sc22e5626dd.png') 0 -618px no-repeat; width: 13px; height: 24px; }
+.calendar_wide .ui-datepicker-prev.ui-state-disabled:hover .ui-icon-circle-triangle-w { background: url('../img/icons-sc22e5626dd.png') 0 -1202px no-repeat; width: 13px; height: 24px; }
+.calendar_wide .ui-datepicker-next { right: 14px; }
+.calendar_wide .ui-datepicker-next .ui-icon-circle-triangle-e { background: url('../img/icons-sc22e5626dd.png') 0 -1148px no-repeat; width: 13px; height: 24px; }
+.calendar_wide .ui-datepicker-next:hover .ui-icon-circle-triangle-e { background: url('../img/icons-sc22e5626dd.png') 0 -584px no-repeat; width: 13px; height: 24px; }
+.calendar_wide .ui-datepicker-next.ui-state-disabled:hover .ui-icon-circle-triangle-e { background: url('../img/icons-sc22e5626dd.png') 0 -1148px no-repeat; width: 13px; height: 24px; }
 
 .pagination { margin-bottom: 80px; text-align: center; font-size: 0; }
 .pagination a { display: inline-block; padding: 2px 10px; margin: 0 15px; font-size: 30px; color: #007cb0; line-height: 1; }

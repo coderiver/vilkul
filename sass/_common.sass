@@ -70,7 +70,7 @@ table
 	.search
 		display: none 
 	.nav
-		margin-top: 26px
+		margin: 26px 15px 0 0
 		li
 			display: none
 			&:first-child
@@ -83,7 +83,7 @@ table
 		top: 26px
 	.social
 		width: 50px
-		margin-top: 23px
+		top: 23px
 		a
 			float: left
 			margin: 0 0 5px 5px
@@ -130,8 +130,9 @@ table
 	+s(logo)
 	@extend %ht
 .social
-	float: right
-	margin-top: 43px
+	position: absolute
+	top: 43px
+	right: 0
 	a
 		display: block
 		margin-bottom: 5px
@@ -147,7 +148,7 @@ table
 	+s(rss)
 .nav
 	float: right
-	margin-top: 36px
+	margin: 36px 15px 0 0
 	ul
 		float: left
 		width: 140px
@@ -341,6 +342,11 @@ table
 	text-align: center
 	li
 		width: 412px
+	a
+		display: block
+		color: #000
+		&:hover
+			color: #009fe1 
 .announcement__navi
 	position: absolute
 	left: 0
@@ -365,45 +371,18 @@ table
 		padding: 15px 18px 45px 18px
 	.announcement__slider
 		font-size: 14px
+		li
+			width: 172px
 //calendar
 .calendar
 	padding: 12px 0
-	margin: 0 20px 65px 20px
+	margin: 0 0 20px 0	
 	border: 1px solid #bebebe
-.calendar_aside
-	margin: 0 0 20px 0
-	.calendar__days
-		ul
-			padding-left: 17px
-			text-align: left
-		li
-			width: 26px
-			text-align: center
-			font-size: 14px
-			text-align: center
-	.calendar__month
-		margin-bottom: 10px
-		button
-			font-size: 18px
-	.calendar__prev, .calendar__next
-		top: -29px
-	.calendar__prev
-		left: 13px
-		+s(prev-s)
-		&:hover
-			+s(prev-s-h)
-	.calendar__next
-		right: 13px
-		+s(next-s)
-		&:hover
-			+s(next-s-h)
-.calendar		
+.calendar
 	.ui-datepicker-calendar 
 		width: 100%
 		thead
-			display: none
-		tr
-			display: inline-block
+			display: none		
 		tbody
 			text-align: center
 			td
@@ -411,16 +390,14 @@ table
 				width: 28px
 				padding: 2px 0
 				vertical-align: top
-				font-size: 17px
+				font-size: 14px
 				color: #007cb0 
 				a
 					&:hover
 						text-decoration: underline				
 				&.ui-datepicker-week-end 
 					a
-						color: #ff3600
-				&.ui-datepicker-other-month
-					display: none
+						color: #ff3600				
 				&.ui-datepicker-today
 					background: #009fe1
 					a						 
@@ -431,13 +408,63 @@ table
 						color: #ff977b			
 	.ui-datepicker-prev, .ui-datepicker-next
 		position: absolute
-		top: 36px
+		top: 3px
 		z-index: 10 	
 		+no-select
 		.ui-icon-circle-triangle-w, .ui-icon-circle-triangle-e		
 			display: block
 			@extend %ht
 			cursor: pointer
+	.ui-datepicker-prev
+		left: 14px
+		.ui-icon-circle-triangle-w
+			+s(prev-s)
+		&:hover
+			.ui-icon-circle-triangle-w
+				+s(prev-s-h)
+		&.ui-state-disabled
+			&:hover
+				.ui-icon-circle-triangle-w
+					+s(prev-s)
+					cursor: default
+	.ui-datepicker-next
+		right: 14px
+		.ui-icon-circle-triangle-e
+			+s(next-s)
+		&:hover
+			.ui-icon-circle-triangle-e
+				+s(next-s-h)
+		&.ui-state-disabled			
+			&:hover
+				.ui-icon-circle-triangle-e
+					+s(next-s)
+					cursor: default
+	.ui-datepicker-year
+		font-size: 18px
+	.ui-datepicker-header
+		position: relative
+		margin-bottom: 5px
+		text-align: center
+	.ui-datepicker-title
+		display: inline-block
+		font-size: 18px
+.calendar_wide	
+	margin: 0 20px 65px 20px
+	.ui-datepicker-calendar 
+		tbody
+			td
+				font-size: 17px
+		tr
+			display: inline-block
+		td
+			&.ui-datepicker-other-month
+				display: none
+	.ui-datepicker-title
+		font-size: 24px
+	.ui-datepicker-year
+		font-size: 24px
+	.ui-datepicker-prev, .ui-datepicker-next
+		top: 39px
 	.ui-datepicker-prev
 		left: 14px
 		.ui-icon-circle-triangle-w
@@ -449,7 +476,6 @@ table
 			&:hover
 				.ui-icon-circle-triangle-w
 					+s(prev)
-					cursor: default
 	.ui-datepicker-next
 		right: 14px
 		.ui-icon-circle-triangle-e
@@ -461,16 +487,6 @@ table
 			&:hover
 				.ui-icon-circle-triangle-e
 					+s(next)
-					cursor: default
-	.ui-datepicker-year
-		font-size: 24px
-	.ui-datepicker-header
-		position: relative
-		margin-bottom: 5px
-		text-align: center
-		.ui-datepicker-title
-			display: inline-block
-			font-size: 24px
 //pagination
 .pagination
 	margin-bottom: 80px

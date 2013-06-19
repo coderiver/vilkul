@@ -5,8 +5,13 @@
 	<meta charset="utf-8">
 	<title>Template</title>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
+	<link rel="stylesheet" media="screen" href="css/jquery.formstyler.css" >
 	<!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.cycle2.min.js"></script>
+	<script src="js/jquery.colorbox-min.js"></script>
+	<script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+	<script src="js/jquery.formstyler.min.js"></script>
 	<script src="js/common.js"></script>
 </head>
 <body>
@@ -68,67 +73,18 @@
 			</nav>
 			<!-- END .menu -->
 			<!-- BEGIN .calendar -->
-			<div class="calendar calendar_aside">
-				<div class="calendar__month"><button>Травень 2013<i></i></button></div>
-				<div class="calendar__slider">
-					<button class="calendar__prev"></button>
-					<button class="calendar__next"></button>
-					<div class="calendar__days">
-						<ul>
-							<li>1</li>
-							<li>2</li>
-							<li>3</li>
-							<li class="is-red">4</li>
-							<li class="is-red">5</li>
-							<li>6</li>
-							<li>7</li>
-							<li>8</li>
-							<li>9</li>
-							<li>10</li>
-							<li>11</li>
-							<li class="is-red">12</li>
-							<li class="is-red">13</li>
-							<li>14</li>
-							<li>15</li>
-							<li>16</li>
-							<li>17</li>
-							<li class="is-red">18</li>
-							<li class="is-red">19</li>
-							<li>20</li>
-							<li class="is-selected">21</li>
-							<li class="no-active">22</li>
-							<li class="no-active">23</li>
-							<li class="no-active">24</li>
-							<li class="no-active-red">25</li>
-							<li class="no-active-red">26</li>
-							<li class="no-active">27</li>
-							<li class="no-active">28</li>
-							<li class="no-active">29</li>
-							<li class="no-active">30</li>
-							<li class="no-active">31</li>
-							<li class="no-active">1</li>
-							<li class="no-active">2</li>
-							<li class="no-active">3</li>
-							<li class="no-active">4</li>
-						</ul>
-					</div>
-				</div>
-			</div>
+			<div class="calendar js-datepicker"></div>
 			<!-- END .calendar -->
 			<!-- BEGIN .announcement -->
 			<div class="announcement announcement_aside">
 				<h3 class="h3">АНОНСИ</h3>
 				<div class="announcement__in">
-					<ul class="announcement__slider">
-						<li>23 травня Олександр Вілкул в Берліні проведе засідання українсько-німецької Групи високого рівня</li>
+					<ul class="announcement__slider cycle-slideshow" data-cycle-fx="fade" data-cycle-timeout="0" data-cycle-slides="> li" data-cycle-pager="#navi-announs">
+						<li><a href="#">23 травня Олександр Вілкул в Берліні проведе засідання українсько-німецької Групи високого рівня</a></li>
+						<li><a href="#">23 травня Олександр</a></li>
+						<li><a href="#">23 травня Олександр Вілкул в Берліні</a></li>
 					</ul>
-					<div class="announcement__navi">
-						<a href=""></a>
-						<a href=""></a>
-						<a class="is-active" href=""></a>
-						<a href=""></a>
-						<a href=""></a>
-					</div>
+					<div id="navi-announs" class="announcement__navi"></div>
 				</div>
 			</div>
 			<!-- END .announcement -->			
