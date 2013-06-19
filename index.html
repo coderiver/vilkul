@@ -5,10 +5,13 @@
 	<meta charset="utf-8">
 	<title>Template</title>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
+	<link rel="stylesheet" media="screen" href="css/jquery.formstyler.css" >
 	<!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery.cycle2.min.js"></script>
 	<script src="js/jquery.colorbox-min.js"></script>
+	<script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+	<script src="js/jquery.formstyler.min.js"></script>
 	<script src="js/common.js"></script>
 </head>
 <body>
@@ -166,47 +169,7 @@
 	</div>
 	<!-- END .m-news -->
 	<!-- BEGIN .calendar -->
-	<div class="calendar">
-		<div class="calendar__month"><button>Травень 2013<i></i></button></div>
-		<div class="calendar__slider">
-			<button class="calendar__prev"></button>
-			<button class="calendar__next"></button>
-			<div class="calendar__days">
-				<ul>
-					<li>1</li>
-					<li>2</li>
-					<li>3</li>
-					<li class="is-red">4</li>
-					<li class="is-red">5</li>
-					<li>6</li>
-					<li>7</li>
-					<li>8</li>
-					<li>9</li>
-					<li>10</li>
-					<li>11</li>
-					<li class="is-red">12</li>
-					<li class="is-red">13</li>
-					<li>14</li>
-					<li>15</li>
-					<li>16</li>
-					<li>17</li>
-					<li class="is-red">18</li>
-					<li class="is-red">19</li>
-					<li>20</li>
-					<li class="is-selected">21</li>
-					<li class="no-active">22</li>
-					<li class="no-active">23</li>
-					<li class="no-active">24</li>
-					<li class="no-active-red">25</li>
-					<li class="no-active-red">26</li>
-					<li class="no-active">27</li>
-					<li class="no-active">28</li>
-					<li class="no-active">29</li>
-					<li class="no-active">30</li>
-					<li class="no-active">31</li>
-				</ul>
-			</div>
-		</div>
+	<div class="calendar js-datepicker"></div>
 	</div>
 	<!-- END .calendar -->
 	<!-- BEGIN .m-projects -->

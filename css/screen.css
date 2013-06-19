@@ -1,4 +1,4 @@
-.logo__name { font: 0/0 a; text-shadow: none; color: transparent; }
+.logo__name, .calendar .ui-datepicker-prev .ui-icon-circle-triangle-w, .calendar .ui-datepicker-prev .ui-icon-circle-triangle-e, .calendar .ui-datepicker-next .ui-icon-circle-triangle-w, .calendar .ui-datepicker-next .ui-icon-circle-triangle-e { font: 0/0 a; text-shadow: none; color: transparent; }
 
 .layout, .anonses { *zoom: 1; }
 .layout:before, .anonses:before, .layout:after, .anonses:after { content: ""; display: table; }
@@ -90,8 +90,8 @@ table { border-spacing: 0; border-collapse: collapse; }
 .nav a:hover { color: black; }
 
 .nav_mod { margin-right: 20px; margin-top: 44px; }
-.nav_mod a { font-family: Calibri, Arial, Tahoma, sans-serif; color: #5a5a5a; text-transform: none; }
-.nav_mod li:first-child a { color: black; text-transform: uppercase; }
+.nav_mod a { font-family: Calibri, Arial, Tahoma, sans-serif; font-size: 14px; color: #5a5a5a; text-transform: none; }
+.nav_mod li:first-child a { font-size: 18px; color: black; text-transform: uppercase; }
 
 .search { position: absolute; bottom: 0; left: 0; padding: 6px 0 6px 20px; background: #009fe1; }
 .search input { float: left; width: 280px; height: 24px; background: white; padding: 0 10px; font-family: "pfdin_reg", Calibri, Arial, sans-serif; font-size: 16px; }
@@ -166,27 +166,31 @@ table { border-spacing: 0; border-collapse: collapse; }
 .calendar_aside .calendar__next { right: 13px; background: url('../img/icons-sc22e5626dd.png') 0 -1236px no-repeat; width: 9px; height: 17px; }
 .calendar_aside .calendar__next:hover { background: url('../img/icons-sc22e5626dd.png') 0 -652px no-repeat; width: 9px; height: 17px; }
 
-.calendar__month { margin-bottom: 5px; text-align: center; }
-.calendar__month button { position: relative; padding-right: 20px; background: none; font-size: 24px; overflow: visible; }
-.calendar__month button i { position: absolute; top: 9px; right: 0; background: url('../img/icons-sc22e5626dd.png') 0 -1131px no-repeat; width: 11px; height: 7px; }
-
-.calendar__slider { position: relative; }
-
-.calendar__prev, .calendar__next { position: absolute; top: 1px; z-index: 10; }
-
-.calendar__prev { left: 14px; background: url('../img/icons-sc22e5626dd.png') 0 -1202px no-repeat; width: 13px; height: 24px; }
-.calendar__prev:hover { background: url('../img/icons-sc22e5626dd.png') 0 -618px no-repeat; width: 13px; height: 24px; }
-
-.calendar__next { right: 14px; background: url('../img/icons-sc22e5626dd.png') 0 -1148px no-repeat; width: 13px; height: 24px; }
-.calendar__next:hover { background: url('../img/icons-sc22e5626dd.png') 0 -584px no-repeat; width: 13px; height: 24px; }
-
-.calendar__days ul { font-size: 0; text-align: center; }
-.calendar__days li { display: inline-block; width: 28px; padding: 2px 0; vertical-align: top; font-size: 17px; color: #007cb0; cursor: pointer; }
-.calendar__days li:hover { text-decoration: underline; }
-.calendar__days li.is-red { color: #ff3600; }
-.calendar__days li.is-selected { background: #009fe1; color: white; }
-.calendar__days li.no-active { color: #a4a4a4; }
-.calendar__days li.no-active-red { color: #ff977b; }
+.calendar .ui-datepicker-calendar { width: 100%; }
+.calendar .ui-datepicker-calendar thead { display: none; }
+.calendar .ui-datepicker-calendar tr { display: inline-block; }
+.calendar .ui-datepicker-calendar tbody { text-align: center; }
+.calendar .ui-datepicker-calendar tbody td { display: inline-block; width: 28px; padding: 2px 0; vertical-align: top; font-size: 17px; color: #007cb0; }
+.calendar .ui-datepicker-calendar tbody td a:hover { text-decoration: underline; }
+.calendar .ui-datepicker-calendar tbody td.ui-datepicker-week-end a { color: #ff3600; }
+.calendar .ui-datepicker-calendar tbody td.ui-datepicker-other-month { display: none; }
+.calendar .ui-datepicker-calendar tbody td.ui-datepicker-today { background: #009fe1; }
+.calendar .ui-datepicker-calendar tbody td.ui-datepicker-today a { color: white; }
+.calendar .ui-datepicker-calendar tbody td.ui-state-disabled { color: #a4a4a4; }
+.calendar .ui-datepicker-calendar tbody td.ui-state-disabled.ui-datepicker-week-end { color: #ff977b; }
+.calendar .ui-datepicker-prev, .calendar .ui-datepicker-next { position: absolute; top: 36px; z-index: 10; -moz-user-select: none; -webkit-user-select: none; user-select: none; }
+.calendar .ui-datepicker-prev .ui-icon-circle-triangle-w, .calendar .ui-datepicker-prev .ui-icon-circle-triangle-e, .calendar .ui-datepicker-next .ui-icon-circle-triangle-w, .calendar .ui-datepicker-next .ui-icon-circle-triangle-e { display: block; cursor: pointer; }
+.calendar .ui-datepicker-prev { left: 14px; }
+.calendar .ui-datepicker-prev .ui-icon-circle-triangle-w { background: url('../img/icons-sc22e5626dd.png') 0 -1202px no-repeat; width: 13px; height: 24px; }
+.calendar .ui-datepicker-prev:hover .ui-icon-circle-triangle-w { background: url('../img/icons-sc22e5626dd.png') 0 -618px no-repeat; width: 13px; height: 24px; }
+.calendar .ui-datepicker-prev.ui-state-disabled:hover .ui-icon-circle-triangle-w { background: url('../img/icons-sc22e5626dd.png') 0 -1202px no-repeat; width: 13px; height: 24px; cursor: default; }
+.calendar .ui-datepicker-next { right: 14px; }
+.calendar .ui-datepicker-next .ui-icon-circle-triangle-e { background: url('../img/icons-sc22e5626dd.png') 0 -1148px no-repeat; width: 13px; height: 24px; }
+.calendar .ui-datepicker-next:hover .ui-icon-circle-triangle-e { background: url('../img/icons-sc22e5626dd.png') 0 -584px no-repeat; width: 13px; height: 24px; }
+.calendar .ui-datepicker-next.ui-state-disabled:hover .ui-icon-circle-triangle-e { background: url('../img/icons-sc22e5626dd.png') 0 -1148px no-repeat; width: 13px; height: 24px; cursor: default; }
+.calendar .ui-datepicker-year { font-size: 24px; }
+.calendar .ui-datepicker-header { position: relative; margin-bottom: 5px; text-align: center; }
+.calendar .ui-datepicker-header .ui-datepicker-title { display: inline-block; font-size: 24px; }
 
 .pagination { margin-bottom: 80px; text-align: center; font-size: 0; }
 .pagination a { display: inline-block; padding: 2px 10px; margin: 0 15px; font-size: 30px; color: #007cb0; line-height: 1; }
@@ -292,7 +296,7 @@ table { border-spacing: 0; border-collapse: collapse; }
 
 #cboxClose { background: url('../img/icons-sc22e5626dd.png') 0 -356px no-repeat; width: 25px; height: 25px; }
 
-.logo__name { font: 0/0 a; text-shadow: none; color: transparent; }
+.logo__name, .calendar .ui-datepicker-prev .ui-icon-circle-triangle-w, .calendar .ui-datepicker-prev .ui-icon-circle-triangle-e, .calendar .ui-datepicker-next .ui-icon-circle-triangle-w, .calendar .ui-datepicker-next .ui-icon-circle-triangle-e { font: 0/0 a; text-shadow: none; color: transparent; }
 
 .layout, .anonses { *zoom: 1; }
 .layout:before, .anonses:before, .layout:after, .anonses:after { content: ""; display: table; }
@@ -327,7 +331,7 @@ table { border-spacing: 0; border-collapse: collapse; }
 
 .right__col-2 { overflow: hidden; margin-top: 148px; padding-left: 33px; }
 
-.logo__name { font: 0/0 a; text-shadow: none; color: transparent; }
+.logo__name, .calendar .ui-datepicker-prev .ui-icon-circle-triangle-w, .calendar .ui-datepicker-prev .ui-icon-circle-triangle-e, .calendar .ui-datepicker-next .ui-icon-circle-triangle-w, .calendar .ui-datepicker-next .ui-icon-circle-triangle-e { font: 0/0 a; text-shadow: none; color: transparent; }
 
 .layout, .anonses { *zoom: 1; }
 .layout:before, .anonses:before, .layout:after, .anonses:after { content: ""; display: table; }
@@ -374,7 +378,7 @@ table { border-spacing: 0; border-collapse: collapse; }
 
 .about { padding: 50px 20px 110px 20px; text-align: center; font-size: 18px; }
 
-.logo__name { font: 0/0 a; text-shadow: none; color: transparent; }
+.logo__name, .calendar .ui-datepicker-prev .ui-icon-circle-triangle-w, .calendar .ui-datepicker-prev .ui-icon-circle-triangle-e, .calendar .ui-datepicker-next .ui-icon-circle-triangle-w, .calendar .ui-datepicker-next .ui-icon-circle-triangle-e { font: 0/0 a; text-shadow: none; color: transparent; }
 
 .layout, .anonses { *zoom: 1; }
 .layout:before, .anonses:before, .layout:after, .anonses:after { content: ""; display: table; }

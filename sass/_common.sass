@@ -175,11 +175,13 @@ table
 	margin-top: 44px
 	a
 		font-family: Calibri, Arial, Tahoma, sans-serif
+		font-size: 14px
 		color: #5a5a5a
 		text-transform: none 
 	li
 		&:first-child
 			a
+				font-size: 18px
 				color: #000 
 				text-transform: uppercase
 .search
@@ -395,59 +397,80 @@ table
 		+s(next-s)
 		&:hover
 			+s(next-s-h)
-.calendar__month
-	margin-bottom: 5px
-	text-align: center
-	button
-		position: relative
-		padding-right: 20px
-		background: none
-		font-size: 24px
-		overflow: visible
-		i
-			position: absolute
-			top: 9px
-			right: 0
-			+s(arr-b)
-.calendar__slider
-	position: relative
-.calendar__prev, .calendar__next
-	position: absolute
-	top: 1px
-	z-index: 10 
-.calendar__prev
-	left: 14px
-	+s(prev)
-	&:hover
-		+s(prev-h)
-.calendar__next
-	right: 14px
-	+s(next)
-	&:hover
-		+s(next-h)
-.calendar__days
-	ul
-		font-size: 0
-		text-align: center
-	li
-		display: inline-block
-		width: 28px
-		padding: 2px 0
-		vertical-align: top
-		font-size: 17px
-		color: #007cb0 
-		cursor: pointer
+.calendar		
+	.ui-datepicker-calendar 
+		width: 100%
+		thead
+			display: none
+		tr
+			display: inline-block
+		tbody
+			text-align: center
+			td
+				display: inline-block
+				width: 28px
+				padding: 2px 0
+				vertical-align: top
+				font-size: 17px
+				color: #007cb0 
+				a
+					&:hover
+						text-decoration: underline				
+				&.ui-datepicker-week-end 
+					a
+						color: #ff3600
+				&.ui-datepicker-other-month
+					display: none
+				&.ui-datepicker-today
+					background: #009fe1
+					a						 
+						color: #fff
+				&.ui-state-disabled
+					color: #a4a4a4
+					&.ui-datepicker-week-end
+						color: #ff977b			
+	.ui-datepicker-prev, .ui-datepicker-next
+		position: absolute
+		top: 36px
+		z-index: 10 	
+		+no-select
+		.ui-icon-circle-triangle-w, .ui-icon-circle-triangle-e		
+			display: block
+			@extend %ht
+			cursor: pointer
+	.ui-datepicker-prev
+		left: 14px
+		.ui-icon-circle-triangle-w
+			+s(prev)
 		&:hover
-			text-decoration: underline
-		&.is-red
-			color: #ff3600
-		&.is-selected
-			background: #009fe1 
-			color: #fff
-		&.no-active
-			color: #a4a4a4
-		&.no-active-red
-			color: #ff977b 
+			.ui-icon-circle-triangle-w
+				+s(prev-h)
+		&.ui-state-disabled
+			&:hover
+				.ui-icon-circle-triangle-w
+					+s(prev)
+					cursor: default
+	.ui-datepicker-next
+		right: 14px
+		.ui-icon-circle-triangle-e
+			+s(next)
+		&:hover
+			.ui-icon-circle-triangle-e
+				+s(next-h)
+		&.ui-state-disabled			
+			&:hover
+				.ui-icon-circle-triangle-e
+					+s(next)
+					cursor: default
+	.ui-datepicker-year
+		font-size: 24px
+	.ui-datepicker-header
+		position: relative
+		margin-bottom: 5px
+		text-align: center
+		.ui-datepicker-title
+			display: inline-block
+			font-size: 24px
 //pagination
 .pagination
 	margin-bottom: 80px
