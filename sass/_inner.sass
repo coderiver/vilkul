@@ -139,9 +139,12 @@
 	p
 		margin-bottom: 1.3em  
 	figure
-		margin: 20px -20px 
+		margin: 20px 0px 
 		img
 			display: block
+			+r
+				width: 100% 
+				height: auto 
 		figcaption
 			padding: 14px 
 			font-size: 14px 
@@ -173,8 +176,13 @@
 		margin-right: -150px 
 		width: 300px 
 		margin-left: 20px 
+		+r
+			margin-right: 0 
+			float: none
+			width: auto 
 		img
 			width: 100% 
+			height: auto 
 	.figure_big
 		img
 			margin: 0 -160px 0 -240px
@@ -186,11 +194,18 @@
 		width: 300px - 40px - 8px
 		margin-right: -150px  
 		margin-left: 20px
-		margin-top: 20px  
+		margin-top: 20px
 		margin-bottom: 20px 
+		+r
+			width: auto 
+
+			float: none
+			margin: 20px auto 
 	.fotos
 		margin: 20px -180px 20px -260px
 		position: relative 
+		+r
+			margin: 20px 0 
 	.years
 		+font-reg
 		font-size: 30px
@@ -263,6 +278,8 @@
 		color: #707070
 //fotos
 .fotos
+	+r
+		overflow: hidden
 	.fotos__title
 		+font-thin
 		font-weight: normal
@@ -275,6 +292,8 @@
 		width: 140px 
 		height: 130px 
 		margin-right: 20px 
+		+r
+			margin-bottom: 20px 
 		img
 			display: block
 			background: #ccc 
@@ -284,15 +303,24 @@
 		width: 940px 
 		overflow: hidden
 		height: 130px 
+		+r
+			overflow: visible
+			width: auto 
+			height: auto 
 		.fotos__slides
 			position: absolute
 			left: 0 
 			top: 0 
 			width: 20000em 
+			+r
+				width: auto 
+				position: static
 	.fotos__next, .fotos__prev
 		position: absolute
 		bottom: 48px 
 		cursor: pointer
+		+r
+			display: none
 	.fotos__next
 		+s(next-b)
 		right: -23px

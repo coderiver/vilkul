@@ -8,11 +8,16 @@
 		position: relative
 		margin-top: -85px
 		z-index: 10
+
 	.aside
 		margin-left: 10px
 		padding: 15px 0 0 10px 
+		+r(mid)
+			display: none
 	.right
 		width: 740px
+		+r
+			width: auto 
 	.right_big
 		width: 700px
 		padding: 20px 10px 0 20px
@@ -25,6 +30,8 @@
 	background: #dddddd 
 	img
 		display: block
+		+r
+			width: 100% 
 .layout__in
 	position: relative
 	margin: -85px 10px 10px 10px
@@ -38,17 +45,32 @@
 .right
 	float: left
 	width: 700px
+	+r
+		width: auto 
+		margin-top: -20px !important 
 .right_mod
 	.right__col-2
 		margin-top: 110px
+		+r
+			display: none
 .right__col-1
 	float: left
 	width: 540px
 	padding: 20px
 	background: #FFF 
+	+r
+		float: none
+		width: auto
+		margin-top: -20px  
+		margin-left: 10px 
+		margin-right: 10px 
 .right__col-2
 	overflow: hidden
 	margin-top: 148px
+	+r
+		display: block 
+		float: none
+		margin: 0 
 
 
 
