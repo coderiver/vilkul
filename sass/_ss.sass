@@ -1,0 +1,64 @@
+.ss
+	.social
+		position: static
+		margin: 20px 0 
+		a
+			background-color: #fff 
+	ul
+		list-style: none
+		line-height: 1 
+	.snav
+		&>li
+			font-size: 24px 
+			text-transform: uppercase
+			color: #fff 
+			text-decoration: none
+			border-bottom: 1px solid #161616 
+			box-shadow: 0 1px 0 #9F9F9F 
+			a
+				display: block
+				color: #fff
+				padding: 9px 0px 6px 0 
+				&.is-active 
+					color: #00B6F9 
+			&>ul
+				li
+					font-size: 16px 
+					border-top: 1px solid #616161
+					box-shadow: 0 -1px 0 #484848
+					&>a
+						color: #ccc 
+						text-transform: uppercase
+						&:hover
+							color: #fff 
+					&.is-parent
+						&>a
+							position: relative
+							padding-right: 26px 
+						&>a:before
+							+s(arrowright)
+							position: absolute
+							right: 17px 
+							top: 50%
+							margin-top: -6px 
+							display: inline-block
+							content: ' '
+					&.is-parent.is-expanded
+						&>a:before
+							+s(arrowbottom)
+					ul
+						display: none
+					&.is-expanded ul
+						display: block
+	.subcontent
+		ul
+			font-size: 16px 
+			a
+				color: #ccc 
+				text-decoration: none
+				display: block
+				text-transform: none !important
+			li
+				text-transform: none
+			ul
+				margin-left: 15px 

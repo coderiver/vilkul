@@ -23,7 +23,7 @@
 			border: none
 			padding: 0
 			margin-bottom: 2px
-			a				
+			a
 				font-size: 18px
 				text-transform: none
 			ul
@@ -48,7 +48,15 @@
 	display: inline-block
 	width: 220px
 	margin: 0 10px 50px 10px
-	vertical-align: top	
+	vertical-align: top
+	+r
+		width: 30%
+		margin: 0 1% 2% 1%
+	+r(mob)
+		width: auto 
+		margin: 0 0 10px 0 
+		border: 1px solid #D1D1D1 
+		display: block
 	&:hover
 		.list__pic
 			&:before
@@ -69,8 +77,12 @@
 	height: 130px
 	margin-bottom: 5px
 	background: #f3f3f3 
+	+r
+		width: auto 
 	img
 		display: block
+		+r
+			width: 100% 
 .list__video
 	position: relative
 	width: 220px
@@ -107,6 +119,13 @@
 .list__title
 	font-size: 14px
 	color: #007cb0
+	+r
+		font-size: 13px 
+		text-align: center
+	+r(mob)
+		font-size: 13px 
+		text-align: center
+		padding: 10px 
 	span
 		display: block
 		padding-top: 10px
@@ -435,12 +454,19 @@
 		margin: 0 -10px
 	.list__item
 		width: 300px
+		+r
+			width: 30% 
+		+r(mob)
+			width: auto
 	.list__title	
 		text-align: center
 		font-size: 20px
 	.list__pic
 		width: 300px
 		height: 210px	
+		+r
+			width: auto 
+			height: auto 
 .projects__types
 	margin-bottom: 30px
 	overflow: hidden

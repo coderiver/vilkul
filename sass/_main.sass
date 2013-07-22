@@ -3,14 +3,28 @@
 .main
 	position: relative
 	margin-bottom: 50px
+	+r
+		margin-bottom: 25px 
+	+r(mob)
+		margin-bottom: 10px 
 .main__pic
 	img
 		display: block
+		+r(mid)
+			width: 100% 
 	&:hover
 		.main__title
 			width: 520px
+			+r
+				width: 440px 
+			+r(mob)
+				width: auto
 			strong
 				font-size: 29px
+				+r
+					font-size: 22px 
+				+r(mob)
+					font-size: 14px 
 .main__title
 	position: absolute
 	bottom: 0
@@ -19,10 +33,23 @@
 	padding: 25px 20px
 	background: rgba(0,0,0,.6) 	
 	+transition(all .2s ease)	
+	+r(mob)
+		text-align: center
+		width: auto 
+		margin: 0 10px 
+		padding: 10px  15px
 	span
 		padding: 0 3px
 		background: $blue
 		color: #fff  
+		+r
+			position: absolute
+			top: -.5em 
+		+r(mob)
+			position: static
+			color: #999 
+			background: transparent 
+			margin-bottom: 8px 
 	strong
 		display: block
 		padding-top: 5px
@@ -31,6 +58,11 @@
 		font-weight: normal
 		line-height: 1.2
 		color: #FFF  
+		+r
+			font-size: 22px
+			padding-top: 0 
+		+r(mob)
+			font-size: 15px 
 .main__news
 	position: absolute
 	top: 0
@@ -39,6 +71,8 @@
 	width: 220px
 	padding: 14px 20px 0 20px 
 	background: rgba(0,0,0,.6) 
+	+r(mid)
+		display: none
 	a
 		display: block
 		margin-bottom: 20px
@@ -56,14 +90,34 @@
 .main-box
 	margin: 0 20px 35px 20px
 	overflow: hidden
+	+r
+		margin: 0 0 35px 0 
 	.digit-day, .announcement
 		float: left
 		width: 460px 
+		+r
+			width: 49% 
+			text-align: center
+		+r(mob)
+			width: auto 
+			float: none
+	.announcement
+		+r
+			float: right
+		+r(mob)
+			float: none
+			margin-top: 20px 
 	.digit-day
 		margin-right: 20px
+		+r
+			margin: 0 
 		span
 			float: left
 			margin-right: 20px
+			+r
+				display: block
+				text-align: center
+				float: none
 //m-news
 .m-news, .m-projects
 	margin-bottom: 40px
@@ -75,10 +129,17 @@
 		margin: 0
 	.list__item
 		width: 300px
+		+r
+			width: 30%
+		+r(mob)
+			width: auto
 .m-news
 	.list__pic
 		width: 300px
 		height: 150px
+		+r
+			width: auto 
+			height: auto 
 	.list__title
 		font-size: 18px
 .m-projects
@@ -87,9 +148,20 @@
 		font-size: 20px
 	.list__pic
 		width: 300px
-		height: 210px		
+		height: 210px
+		+r
+			width: auto 
+			height: auto 
+	.all
+		+r
+			margin-top: 30px 
+.m-projects + .about
+	margin-top: -30px 
 //about
 .about
 	padding: 50px 20px 110px 20px
 	text-align: center
 	font-size: 18px
+	+r
+		padding-top: 20px 
+		padding-bottom: 40px 

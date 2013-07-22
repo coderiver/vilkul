@@ -12,6 +12,11 @@ body
 	font-size: 14px
 	color: $font
 	line-height: 1.4
+	// background: rgba(black, 0) 
+	// +r(mid)
+	// 	background: rgba(black, 0.2) 
+	// +r(mob)
+	// 	background: rgba(black, .5) 
 	//-webkit-transform: translate3d(0,0,0);
 	//-weblit-backface-visibility: hidden;
 // resets
@@ -39,6 +44,24 @@ button
 table 
 	border-spacing: 0
 	border-collapse: collapse
+.has-sidebar 
+	overflow: hidden
+	.footer,.wrap
+		+transform(translate(230px, 0))
+		+transition(all .3s linear)
+	.ss
+		+transition(all .3s linear)
+		left: 0 
+
+.ss
+	position: fixed
+	left: -230px 
+	width: 230px - 26px
+	padding-left: 26px 
+	top: 0 
+	height: 100% 
+	overflow: auto
+	background: #545454 
 // common styles
 .wrap
 	width: 980px
@@ -46,6 +69,9 @@ table
 	height: auto !important
 	height: 100%
 	margin: 0 auto -285px
+	+r(mid)
+		width: auto
+		margin: 0 10px 
 .wrap_p404
 	margin: 0 auto 0
 .wrap_scroll
@@ -57,8 +83,12 @@ table
 		width: 980px 
 		height: 83px
 		margin-left: -490px
-		background: #FFF 		
-		z-index: 1000 
+		background: #FFF
+		z-index: 1000
+		+r(mid)
+			position: absolute !important 
+			width: auto
+			height: 100px 
 		&:before, &:after
 			content: ""
 			position: absolute
@@ -76,7 +106,7 @@ table
 				display: none
 				&:first-child
 					display: block 
-		.search
+		.search 
 			display: none 	
 		.logo
 			margin: 31px 0 0 20px
@@ -93,6 +123,8 @@ table
 .push
 	height: 285px
 	clear: both
+	+r
+		display: none
 .h2, .h3
 	margin-bottom: 20px
 	+font-thin
@@ -103,6 +135,8 @@ table
 	color: #000 
 .h2
 	font-size: 45px
+	+r
+		font-size: 20px 
 .h3
 	font-size: 36px
 .title
@@ -115,6 +149,12 @@ table
 .header
 	position: relative
 	height: 180px
+
+	+r
+		height: 100px 
+		overflow: hidden
+	+r(mob)
+		height: 75px 
 .header_p404
 	height: 120px 
 .home
@@ -122,25 +162,44 @@ table
 	top: 36px
 	left: 355px
 	+s(home) 
+	+r()
+		display: none
 	&:hover
 		+s(home-h)
 .logo
 	float: left
-	margin: 41px 0 0 20px 	
+	margin: 41px 0 0 20px
+	+r
+		margin-left: 45px 
+		margin-right: 15px 
+	+r(mob)
+		margin: 20px 0 0 0
+		text-align: center 
+		float: none
+		margin: 0 
+		padding-top: 17px 
 	span
 		text-transform: uppercase
-		+font-light
+		font-size: 12px 
 		color: #000 
 .logo__name
 	+s(logo)
 	@extend %ht
+	margin: 0 auto 
+	+r
+		+s(logomid)
 .social
 	position: absolute
 	top: 43px
 	right: 0
+	+r(mob)
+		display: none
+		top: 10px 
 	a
 		display: block
 		margin-bottom: 5px
+		+r
+			display: inline-block
 		&:hover
 			opacity: .6 
 .social__fb
@@ -151,6 +210,8 @@ table
 	+s(yt)
 .social__rss
 	+s(rss)
+	+r
+		display: none
 .social_big
 	position: relative
 	top: auto
@@ -165,21 +226,63 @@ table
 		+s(tw-b)
 	.social__yt
 		+s(yt-b)
+.header__menu
+	position: fixed
+	left: 10px
+	top: 35px 
+	display: none
+	cursor: pointer
+	+r
+		display: block
+		position: fixed
+		top: 35px
+		left: 10px
+		z-index: 200 
+		+s(menuicon) 
+	+r(mob)
+		top: 10px 
+	.has-sidebar &
+		+r
+			left: 0px
+			top: 35px 
+			+transition(all .3s linear)
+
 .nav
 	float: right
 	margin: 36px 15px 0 0
+	+r
+		margin: 0
+		float: none
+		width: 45%
+		white-space: nowrap
+		padding-top: 41px 
+		padding-left: 10px 
+		margin-right: 40px 
+		padding-left: 20px 
+		overflow: hidden
+	+r(mob)
+		display: none
 	ul
 		float: left
 		width: 140px
 		padding-right: 20px
+		+r
+			display: inline-block
+			width: 27% 
+			float: none
 		&:last-child
 			width: 200px
 	li
 		padding: 2px 0 0 5px
 		margin-bottom: 5px
 		line-height: 1.2
+		+r
+			display: none
 		&:first-child
 			font-size: 24px
+			+r
+				display: inline
+				font-size: 19px 
 		&.is-active
 			background: #a2a2a2
 			a
@@ -193,23 +296,42 @@ table
 .nav_mod
 	margin-right: 20px
 	margin-top: 44px
+	+r
+		margin-top: 0 
+		text-align: center
+		width: 100%
+		position: static 
+		padding-bottom: 20px 
+		margin: 0 
+		padding: 0 
+		padding: 30px 0 
 	a
 		font-family: Calibri, Arial, Tahoma, sans-serif
 		font-size: 14px
 		color: #5a5a5a
 		text-transform: none 
 	li
+		+r
+			display: block
 		&:first-child
 			a
 				font-size: 18px
 				color: #000 
 				text-transform: uppercase
+	ul
+		+r
+			display: inline-block
+			width: 25% 
+			vertical-align: top
+			text-align: left
 .search
 	position: absolute
 	bottom: 0
 	left: 0
 	padding: 6px 0 6px 20px
 	background: $blue
+	+r
+		display: none
 	input
 		float: left
 		width: 280px
@@ -227,6 +349,10 @@ table
 	border-top: 40px solid #bdbdbd
 	box-shadow: 0 0 0 5px $blue
 	background: #d4d4d4 
+	+r
+		position: relative
+		display: inline-block
+		width: 100% 
 .footer_p404
 	border: none
 	box-shadow: none
@@ -249,9 +375,21 @@ table
 	width: 980px
 	height: 245px
 	margin: 0 auto
+	+r
+		width: auto 
+		height: auto 
+		position: static
 .subscribe
 	float: left
 	margin: 35px 0 0 20px
+	+r
+		display: none
+	+r(mob)
+		display: block
+		margin: 20px auto 
+		width: 300px 
+		float: none
+		padding-bottom: 35px 
 	label, span
 		display: block
 	span
@@ -298,11 +436,21 @@ table
 	top: 135px
 	left: 5px
 	color: #000
+	+r
+		position: absolute
+		top: -40px
+		height: 40px
+		line-height: 40px
+		text-align: center
+		width: 100% 
+		left: 0 
 .created
 	position: absolute
 	top: 175px
 	left: 20px
 	color: #616161 
+	+r
+		display: none
 	a
 		color: #0076a7
 		text-decoration: underline 
@@ -333,10 +481,14 @@ table
 		font-size: 30px
 		text-align: center
 		color: #858585 
+		+r
+			font-size: 20px 
 .digit-day__in
 	border: 6px solid #adadad
 	padding: 22px 20px
 	overflow: hidden
+	+r
+		padding: 12px 15px 
 	span
 		display: block
 		margin-right: 20px
@@ -345,10 +497,14 @@ table
 		color: #3f3f3f 
 		line-height: 1.2
 		margin-right: 0 
+		+r
+			font-size: 48px 
 	p
 		overflow: hidden
 		font-size: 18px
 		line-height: 1.5
+		+r
+			font-size: 16px 
 .digit-day_aside
 	margin-bottom: 20px
 	.digit-day__in	
@@ -368,6 +524,8 @@ table
 		font-size: 30px
 		text-align: center
 		color: #007cb0 
+		+r
+			font-size: 20px 
 .announcement__in
 	position: relative
 	min-height: 60px
@@ -376,8 +534,12 @@ table
 .announcement__slider	
 	font-size: 18px
 	text-align: center
+	+r
+		font-size: 16px 
 	li
 		width: 412px
+		+r
+			width: 100% 
 	a
 		display: block
 		color: #000

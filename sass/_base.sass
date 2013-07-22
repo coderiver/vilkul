@@ -6,6 +6,21 @@ $blue-h: #00b4ff
 $font: #3f3f3f
 // global sprites with padding
 $icons: sprite-map("icons/*.png", $spacing: 10px)
+
+$step1: 700px
+$step0: 980px
+@mixin r($media:mid)
+	@if $media == mid
+		@media only screen and (max-width: $step0)
+			@content
+	@if $media == mob
+		@media only screen and (max-width: $step1)
+			@content
+	@if $media == step2
+		@media only screen and (max-width: $step2)
+			@content
+
+
 // sized sprites
 @mixin image-size($path)
 	width: image-width($path)

@@ -1,5 +1,14 @@
 $(document).ready(function() {
-
+$('.header__menu').click(function (e) {
+  $('body').toggleClass('has-sidebar');
+   e.stopPropagation();
+});
+$('.wrap').click(function (e) {
+  $('body').removeClass('has-sidebar');
+});
+$('.ss .is-parent').click(function (e) {
+  $(this).toggleClass('is-expanded');
+});
 //colorbox
 jQuery.extend(jQuery.colorbox.settings, {
 	current: "{current}/{total}"
