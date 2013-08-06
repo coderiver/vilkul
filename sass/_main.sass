@@ -31,13 +31,16 @@
 	left: 0
 	width: 440px
 	padding: 25px 20px
-	background: rgba(0,0,0,.6) 	
-	+transition(all .2s ease)	
+	background: rgba(0,0,0,.6)
+	+transition(all .2s ease)
 	+r(mob)
 		text-align: center
 		width: auto 
 		margin: 0 10px 
 		padding: 10px  15px
+		+transition(all 0 linear)
+	+r
+		+transition(all 0 linear)
 	span
 		padding: 0 3px
 		background: $blue
@@ -76,6 +79,7 @@
 	a
 		display: block
 		margin-bottom: 20px
+		max-height: auto
 		&:hover
 			img
 				border-color: #009fe1
@@ -106,11 +110,12 @@
 			float: right
 		+r(mob)
 			float: none
-			margin-top: 20px 
+			margin-top: 25px 
 	.digit-day
 		margin-right: 20px
 		+r
 			margin: 0 
+			margin-top: 25px
 		span
 			float: left
 			margin-right: 20px
@@ -118,9 +123,13 @@
 				display: block
 				text-align: center
 				float: none
+
 //m-news
 .m-news, .m-projects
 	margin-bottom: 40px
+	text-align: center
+	&>*
+		text-align: left
 	.h2
 		text-align: center
 		font-size: 40px
@@ -132,7 +141,9 @@
 		+r
 			width: 30%
 		+r(mob)
-			width: auto
+			width: 48%
+		+r(cli)
+			width: auto 
 .m-news
 	.list__pic
 		width: 300px
@@ -144,8 +155,11 @@
 		font-size: 18px
 .m-projects
 	.list__title	
-		text-align: center
 		font-size: 20px
+		+r
+			text-align: left
+		+r(cli)
+			text-align: center
 	.list__pic
 		width: 300px
 		height: 210px
@@ -155,8 +169,12 @@
 	.all
 		+r
 			margin-top: 30px 
+			text-align: center !important
 .m-projects + .about
 	margin-top: -30px 
+.list__pic 
+	+r
+		height: auto !important 
 //about
 .about
 	padding: 50px 20px 110px 20px

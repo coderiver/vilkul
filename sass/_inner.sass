@@ -41,6 +41,13 @@
 	padding-left: 10px
 	margin: 0 -20px
 	font-size: 0
+	text-align: center
+	&>*
+		text-align: left
+	+r
+		margin: 0
+		padding: 0
+
 .list_photos
 	.list__title
 		color: #5c5c5c 
@@ -53,8 +60,10 @@
 		width: 30%
 		margin: 0 1% 2% 1%
 	+r(mob)
+		width: 48% 
+	+r(cli)
 		width: auto 
-		margin: 0 0 10px 0 
+		margin: 0 0 22px 0 
 		border: 1px solid #D1D1D1 
 		display: block
 	&:hover
@@ -120,17 +129,23 @@
 	font-size: 14px
 	color: #007cb0
 	+r
-		font-size: 13px 
-		text-align: center
+		font-size: 16px 
+		text-align: left
+		line-height: 1.2 
 	+r(mob)
 		font-size: 13px 
-		text-align: center
+		text-align: left
 		padding: 10px 
+	+r(cli)
+		text-align: center
 	span
 		display: block
 		padding-top: 10px
 		font-size: 12px
 		color: #9f9f9f 
+		+r
+			padding-top: 5px
+		padding-bottom: 10px 	
 //content
 .content
 	font-size: 16px 
@@ -171,6 +186,19 @@
 		&:after
 			content: "\201d"
 			bottom: -37px
+		p
+			+font-light
+			font-size: 30px 
+			line-height: 1
+			margin: 0
+			padding: 0  
+			+r(cli)
+				font-size: 23px 
+		+r(cli)
+			font-size: 23px 
+			
+
+
 	.figure_right
 		float: right
 		margin-right: -150px 
@@ -180,12 +208,17 @@
 			margin-right: 0 
 			float: none
 			width: auto 
+			margin-left: 0 
 		img
 			width: 100% 
-			height: auto 
+			height: auto !important
 	.figure_big
 		img
 			margin: 0 -160px 0 -240px
+			+r
+				margin: 0
+				display: block
+				width: 100%
 	.figure_mod
 		margin-left: -20px
 		margin-right: -20px
@@ -210,11 +243,68 @@
 		+font-reg
 		font-size: 30px
 		color: #645f63 
+	p
+		img
+			+r(mob)
+				display: block
+				height: auto !important 
+				width: 100% !important 
+	p + h2
+		margin-top: 40px 
+	p + h3
+		margin-top: 35px
+	p + h4
+		margin-top: 25px
+	p + h5, p + h6
+		margin-top: 30px
+	h2, h3, h4, h5, h6
+		margin-bottom: 5px
+		+font-light		
+		font-weight: normal
+		text-transform: uppercase
+		line-height: 1.2
+		b
+			font-weight: normal
+	h2
+		font-size: 32px 
+	h3
+		font-size: 28px 
+	h4
+		font-size: 24px
+	h5
+		font-size: 20px
+	h6
+		font-size: 18px
+	h2,h3,h4,h5,h6
+		+r(cli)
+			text-align: center
+	ul,ol
+		list-style: disc
+		margin: 1em 3em 
+		padding: 0 
+	ol
+		list-style-type: decimal
 .content__news, .content__photo, .content__video
 	position: relative
 	margin: 20px -160px 40px -240px
+	+r
+		margin: 20px 0 
 	.h3
 		text-align: center
+.cycle-slideshow,.cycle-carousel-wrap
+	+r
+		width: 100% !important 
+		white-space: normal !important
+		text-align: center
+		height: auto !important 
+.content-pic
+	+r
+		width: 100% 
+		display: block
+	img
+		+r
+			display: block
+			width: 100% 
 .content__news		
 	.list
 		padding: 0
@@ -378,6 +468,12 @@
 //likes
 .likes
 	margin: 0 0 20px 33px
+	+r
+		text-align: center
+	&>div
+		display: inline-block !important
+		vertical-align: top !important
+		width: 140px 
 //
 .anonses
 	@extend %clr
@@ -484,10 +580,12 @@
 		width: 300px
 		+r
 			width: 30% 
+
 		+r(mob)
+			width: 48%
+		+r(cli)
 			width: auto
 	.list__title	
-		text-align: center
 		font-size: 20px
 	.list__pic
 		width: 300px

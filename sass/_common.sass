@@ -3,7 +3,7 @@
 	margin: 0
 	padding: 0 
 	//box-shadow: 0 0 5px red
-	//-webkit-text-size-adjust: none
+	-webkit-text-size-adjust: none
 html, body 
 	height: 100%
 body
@@ -125,6 +125,8 @@ table
 	clear: both
 	+r
 		display: none
+.header .social
+	right: 0 !important 
 .h2, .h3
 	margin-bottom: 20px
 	+font-thin
@@ -133,12 +135,32 @@ table
 	text-transform: uppercase
 	line-height: 1
 	color: #000 
+	+r(cli)
+		text-align: center
+		+font-reg
+		font-size: 26px 
+		
 .h2
 	font-size: 45px
-	+r
-		font-size: 20px 
+	+r(cli)
+		font-size: 36px 
+.h1
+	+r(cli)
+		text-align: center
+		font-size: 36px 
+.h1_mod
+	font-size: 36px
+	text-transform: none 
+	+font-thin
+	+r(cli)
+		text-align: center
+		text-transform: none 
+.h2
+	font-size: 45px
 .h3
 	font-size: 36px
+	+r(cli)
+		font-size: 26px 
 .title
 	margin-bottom: 25px
 	text-transform: uppercase
@@ -211,7 +233,7 @@ table
 .social__rss
 	+s(rss)
 	+r
-		display: none
+		display: none !important
 .social_big
 	position: relative
 	top: auto
@@ -256,10 +278,11 @@ table
 		width: 45%
 		white-space: nowrap
 		padding-top: 41px 
-		padding-left: 10px 
+		padding-left: 7px 
 		margin-right: 40px 
 		padding-left: 20px 
-		overflow: hidden
+		position: relative
+		left: 10px 
 	+r(mob)
 		display: none
 	ul
@@ -268,21 +291,24 @@ table
 		padding-right: 20px
 		+r
 			display: inline-block
-			width: 27% 
+			width: 23% 
 			float: none
 		&:last-child
 			width: 200px
 	li
 		padding: 2px 0 0 5px
-		margin-bottom: 5px
+		margin-bottom: 4px
 		line-height: 1.2
 		+r
 			display: none
 		&:first-child
 			font-size: 24px
+			margin-bottom: 4px
+
 			+r
 				display: inline
-				font-size: 19px 
+				font-size: 22px 
+				padding-right: 4px 
 		&.is-active
 			background: #a2a2a2
 			a
@@ -483,6 +509,12 @@ table
 		color: #858585 
 		+r
 			font-size: 20px 
+	&.digit-day_center
+		float: none
+		margin: 0 auto 
+		width: 400px 
+		+r
+			width: auto 
 .digit-day__in
 	border: 6px solid #adadad
 	padding: 22px 20px
@@ -648,6 +680,8 @@ table
 		font-size: 18px
 .calendar_wide	
 	margin: 0 20px 65px 20px
+	+r
+		margin-bottom: 35px 
 	.ui-datepicker-calendar 
 		tbody
 			td
@@ -717,6 +751,9 @@ table
 	font-size: 18px 
 	margin-bottom: 10px
 	line-height: 1
+	+r(cli)
+		text-align: center
+		font-size: 14px 
 	a
 		color: #000		
 		text-decoration: none

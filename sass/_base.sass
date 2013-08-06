@@ -9,9 +9,13 @@ $icons: sprite-map("icons/*.png", $spacing: 10px)
 
 $step1: 700px
 $step0: 980px
+$step12: 410px
 @mixin r($media:mid)
 	@if $media == mid
 		@media only screen and (max-width: $step0)
+			@content
+	@if $media == cli
+		@media only screen and (max-width: $step12)
 			@content
 	@if $media == mob
 		@media only screen and (max-width: $step1)

@@ -22,12 +22,17 @@
 		width: 700px
 		padding: 20px 10px 0 20px
 		background: #fff 
+		+r
+			width: auto 
+			padding: 0 
 .layout_mod
 	.aside, .right
 		margin-top: -128px
 .layout__pic
 	min-height: 130px
 	background: #dddddd 
+	+r
+		min-height: 0 
 	img
 		display: block
 		+r
@@ -64,6 +69,10 @@
 		margin-top: -20px  
 		margin-left: 10px 
 		margin-right: 10px 
+	+r(cli)
+		margin: 0px 0 0 0 
+		padding: 20px 0 0 0
+
 .right__col-2
 	overflow: hidden
 	margin-top: 148px
